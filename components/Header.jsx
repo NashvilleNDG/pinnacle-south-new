@@ -154,14 +154,16 @@ export default function Header({ variant = "auto" }) {
           >
             Insights
           </Link>
+
+          <Link
+            href="/contact"
+            className="inline-flex shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-[#1a3a5c]"
+          >
+            Get in Touch
+          </Link>
         </div>
 
-        <Link
-          href="/contact"
-          className="hidden shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[14px] font-semibold text-white transition-colors hover:bg-[#1a3a5c] lg:inline-flex"
-        >
-          Get in Touch
-        </Link>
+        
 
         <button
           type="button"
