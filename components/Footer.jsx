@@ -67,9 +67,12 @@ export default function Footer() {
                     (800) 781-9010
                   </a>
                   <br />
-                  <a className="hover:text-white transition-colors" href="tel:+17702273476">
-                    (770) 227-3476
-                  </a>
+                    <a
+                      className="hover:text-white transition-colors"
+                      href="tel:+16159059115"
+                    >
+                      (615) 905-9115
+                    </a>
                 </div>
               </div>
 

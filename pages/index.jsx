@@ -135,7 +135,7 @@ export default function HomePage({ featuredProjects, latestPosts, projectHeroGal
       { "@type": "PostalAddress", addressLocality: "Griffin", addressRegion: "Georgia", addressCountry: "US" },
       { "@type": "PostalAddress", addressLocality: "Franklin", addressRegion: "Tennessee", addressCountry: "US" },
     ],
-    telephone: "(800) 781-9010",
+    telephone: ["(800) 781-9010", "(615) 905-9115"],
   };
 
   return (

@@ -339,18 +339,21 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               </Link>
             </div>
 
-            <motion.div
-              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.1 } } }}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              className="grid gap-2 md:grid-cols-3"
-            >
-              {relatedProjects.map((p) => (
-                <motion.article key={p.slug} variants={itemFade}>
+            {/* Per-item whileInView (not stagger on parent) avoids a third card stuck at opacity:0
+                while still clickable. min-w-0 prevents grid blowout + horizontal clip under overflow-x-hidden. */}
+            <div className="grid gap-2 md:grid-cols-3">
+              {relatedProjects.map((p, index) => (
+                <motion.article
+                  key={p.slug}
+                  className="min-w-0"
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.15, margin: "0px 0px -40px 0px" }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                >
                   <Link
                     href={`/project/${p.slug}`}
-                    className="group relative block overflow-hidden rounded-none aspect-[4/3] bg-gray-200"
+                    className="group relative block min-w-0 overflow-hidden rounded-none aspect-[4/3] bg-gray-200"
                   >
                     <img
                       src={p.image}
@@ -370,7 +373,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   </Link>
                 </motion.article>
               ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
