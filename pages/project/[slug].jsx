@@ -139,7 +139,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
-          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center p-12 text-center">
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center px-5 pb-10 pt-8 text-center sm:p-12">
             <motion.div variants={containerStagger} initial="hidden" animate="show" className="max-w-3xl">
               <motion.div variants={itemFade}>
                 <Link
@@ -162,7 +162,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
 
               <motion.h1
                 variants={itemFade}
-                className="mt-3 font-serif text-[44px] font-bold leading-[1.1] text-white sm:text-[52px]"
+                className="mt-3 font-serif text-[24px] font-bold leading-[1.12] tracking-tight text-white sm:text-[34px] sm:leading-[1.1] md:text-[42px] lg:text-[52px]"
               >
                 {project.name}
               </motion.h1>

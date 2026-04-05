@@ -206,7 +206,7 @@ export default function HomePage({ projectTiles }) {
               </div>
             </motion.div>
 
-            <motion.div {...fadeInUp} className="order-1 lg:order-2">
+            <motion.div {...fadeInUp} className="order-1 lg:order-2 text-left">
               <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
                 Our Company
               </span>
@@ -589,10 +589,10 @@ export default function HomePage({ projectTiles }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-40px" }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="relative rounded-sm border border-white/[0.08] bg-white/[0.04] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-white/[0.04] sm:p-10"
+                  className="relative rounded-sm border border-white/[0.08] bg-white/[0.04] p-8 text-center shadow-[0_20px_50px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-white/[0.04] sm:p-10 md:text-left"
                 >
                   <div
-                    className="absolute left-8 top-0 h-1 w-12 -translate-y-px bg-[#AC7B4A] sm:left-10"
+                    className="absolute left-1/2 top-0 h-1 w-12 -translate-x-1/2 -translate-y-px bg-[#AC7B4A] md:left-8 md:translate-x-0 lg:left-10"
                     aria-hidden
                   />
                   <blockquote className="pt-2">

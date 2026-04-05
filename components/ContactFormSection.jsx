@@ -37,8 +37,12 @@ export default function ContactFormSection({
             whileInView="whileInView"
             className="rounded-sm border border-[#e5ddd4] bg-white p-5 sm:p-8 md:p-10 shadow-[0_4px_24px_rgba(15,39,68,0.06)]"
           >
-            <h2 className="font-serif text-[28px] font-bold text-[#0f2744]">{title}</h2>
-            <p className="mt-3 text-[15px] leading-[1.75] text-[#1c2b3a]">{description}</p>
+            <h2 className="text-center font-serif text-[28px] font-bold text-[#0f2744] md:text-left">
+              {title}
+            </h2>
+            <p className="mt-3 text-center text-[15px] leading-[1.75] text-[#1c2b3a] md:text-left">
+              {description}
+            </p>
 
             <form className="mt-8 space-y-6" aria-label="Contact form">
               <div className="grid gap-5 sm:grid-cols-2">
@@ -140,18 +144,18 @@ export default function ContactFormSection({
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3 text-[12px] text-[#6b7a8d]">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-col gap-3 text-center text-[12px] text-[#6b7a8d] md:text-left">
+                <div className="flex items-center justify-center gap-2 md:justify-start">
                   <Shield className="h-4 w-4 shrink-0 text-[#6b7a8d]" aria-hidden />
                   Your information is kept strictly confidential.
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center justify-center gap-2 md:justify-start">
                   <Clock className="h-4 w-4 shrink-0 text-[#6b7a8d]" aria-hidden />
                   We respond within one business day.
                 </div>
               </div>
 
-              <div className="pt-2">
+              <div className="flex justify-center pt-2 md:justify-start">
                 <button
                   type="submit"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-sm bg-[#0f2744] px-6 py-3 text-[14px] font-semibold text-white hover:bg-[#1a3a5c] transition-colors sm:w-auto"
@@ -244,10 +248,10 @@ export default function ContactFormSection({
               initial="initial"
               whileInView="whileInView"
               aria-label="Why work with us"
-              className="rounded-sm border border-[#e8e8e8] bg-[#F9F9F9] p-8 shadow-[0_4px_14px_rgba(0,0,0,0.06)]"
+              className="rounded-sm border border-[#e8e8e8] bg-[#F9F9F9] p-8 text-center shadow-[0_4px_14px_rgba(0,0,0,0.06)] md:text-left"
             >
               <h2 className="text-[18px] font-bold leading-tight text-[#333333]">Why Work With Us</h2>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-[14px] leading-[1.7] text-[#777777]">
+              <ul className="mx-auto mt-4 inline-block max-w-full list-disc space-y-2 pl-5 text-left text-[14px] leading-[1.7] text-[#777777] md:mx-0 md:block">
                 <li>Hospitality FF&amp;E expertise since 2003</li>
                 <li>Established relationships with top-tier manufacturers</li>
                 <li>Full-cycle support from specification through installation</li>

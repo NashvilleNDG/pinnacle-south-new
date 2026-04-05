@@ -62,12 +62,6 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="/insights"
-            className={`text-[13px] font-medium xl:text-[14px] ${textClass} hover:text-copper transition-colors`}
-          >
-            Insights
-          </Link>
-          <Link
             href="/#contact"
             className="inline-flex shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#1a3a5c] xl:text-[14px]"
           >
@@ -127,13 +121,6 @@ export default function Header() {
                     {item.label}
                   </Link>
                 ))}
-                <Link
-                  href="/insights"
-                  onClick={() => setIsMobileOpen(false)}
-                  className="w-full rounded-xl px-5 py-4 text-[16px] font-medium text-black transition-colors hover:bg-gray-50"
-                >
-                  Insights
-                </Link>
                 <Link
                   href="/#contact"
                   onClick={() => setIsMobileOpen(false)}
