@@ -1,104 +1,5 @@
 [
   {
-    "id": "courtyard-marriott-atlanta",
-    "slug": "courtyard-marriott-atlanta",
-    "brand": "Courtyard by Marriott",
-    "name": "Courtyard by Marriott, Atlanta",
-    "location": "Atlanta, GA",
-    "folder": "courtyard-by-marriott-atlanta",
-    "image": "/images/courtyard-by-marriott-atlanta/hero.jpg",
-    "summary": "A comprehensive FF&E renovation for a premier Courtyard by Marriott location in the heart of Atlanta, delivering modern guest room furnishings and public space upgrades.",
-    "quote": "Great experience. It's what you work hard to create for your hotel guests. It's also what you get with Pinnacle South.",
-    "overview": "Pinnacle South was engaged to manage the full FF&E scope for a significant renovation of the Courtyard by Marriott in Atlanta, Georgia. The project encompassed guest rooms, corridors, lobby, and dining areas, requiring close coordination with the ownership group, design team, and general contractor. Our team managed vendor sourcing, procurement, logistics, and installation coordination to ensure the property met Marriott's updated brand standards while maintaining the project timeline and budget.",
-    "spotlight": "Working within a compressed renovation timeline, our team coordinated the delivery and installation of over 200 guest room packages, lobby furniture, and restaurant seating. By leveraging our established vendor relationships and proactive logistics planning, we achieved on-time delivery with minimal property disruption. The completed renovation met all Marriott brand standards and received positive feedback from ownership and property management.",
-    "services": [
-      "Design Support",
-      "Procurement Management",
-      "Installation Support"
-    ],
-    "gallery": [
-      "/images/courtyard-by-marriott-atlanta/gallery-1.jpg",
-      "/images/courtyard-by-marriott-atlanta/gallery-2.jpg",
-      "/images/courtyard-by-marriott-atlanta/gallery-3.jpg"
-    ]
-  },
-  {
-    "id": "homewood-suites-charlotte",
-    "slug": "homewood-suites-charlotte",
-    "brand": "Homewood Suites",
-    "name": "Homewood Suites, Charlotte",
-    "location": "Charlotte, NC",
-    "folder": "Homewood-Suites-Charlotte",
-    "image": "/images/Homewood-Suites-Charlotte/hero.png",
-    "summary": "Full FF&E procurement and installation support for a new-build Homewood Suites by Hilton in Charlotte, delivering extended-stay guest room and public space furnishings to brand standards.",
-    "quote": "Distinctive design that's stylish. Smart buying that's relentless. Installation that's flawless. Personal service that's tireless. Managing process that's seamless.",
-    "overview": "Pinnacle South was engaged to manage FF&E procurement and installation coordination for a new-build Homewood Suites by Hilton in Charlotte, North Carolina. The project included guest room case goods, seating, and bedding, along with lobby, breakfast, and fitness area furnishings. Our team worked with the ownership group and general contractor to align specifications with Hilton brand standards, manage vendor lead times, and coordinate phased delivery and installation to support the property's opening schedule.",
-    "spotlight": "Coordinating FF&E for a new-build required tight alignment with construction milestones. We secured inventory and managed logistics so guest room and public area furnishings arrived on schedule, enabling the property to open on time. Quality checks and punch-list support ensured every space met Homewood Suites brand standards before handover to the owner.",
-    "services": [
-      "Design Support",
-      "Procurement Management",
-      "Installation Support"
-    ],
-    "gallery": []
-  },
-  {
-    "id": "courtyard-marriott-nashville",
-    "slug": "courtyard-marriott-nashville",
-    "brand": "Courtyard by Marriott",
-    "name": "Courtyard by Marriott, Nashville",
-    "location": "Nashville, TN",
-    "folder": "Courtyard-by-Marriott-Nashville",
-    "image": "/images/Courtyard-by-Marriott-Nashville/hero.jpg",
-    "summary": "FF&E procurement and installation for a Courtyard by Marriott in Nashville, delivering modern guest room furnishings, workstation seating, and public space upgrades to Marriott brand standards.",
-    "quote": "Make your guests really feel like guests, not just customers.",
-    "overview": "Pinnacle South managed the full FF&E scope for the Courtyard by Marriott in Nashville, Tennessee. The project included guest room case goods, bedding, and the signature work desk and ergonomic seating, along with lobby and common area furnishings. Our team coordinated with the ownership group and design team to source and deliver all items to Marriott specifications, managing vendor lead times and installation to align with the property's opening timeline.",
-    "spotlight": "Sourcing and delivering the distinctive guest room workstation and seating—a hallmark of the Courtyard brand—required close coordination with our vendor network. We ensured on-time delivery and installation so the Nashville property could open with fully furnished, brand-compliant rooms. Final walk-through and punch-list support ensured every detail met ownership and Marriott standards.",
-    "services": [
-      "Design Support",
-      "Procurement Management",
-      "Installation Support"
-    ],
-    "gallery": []
-  },
-  {
-    "id": "homewood-suites-new-orleans",
-    "slug": "homewood-suites-new-orleans",
-    "brand": "Homewood Suites",
-    "name": "Homewood Suites, New Orleans",
-    "location": "New Orleans, LA",
-    "folder": "Homewood-Suites-New-Orleans",
-    "image": "/images/Homewood-Suites-New-Orleans/hero.jpg",
-    "summary": "FF&E procurement and installation for a Homewood Suites by Hilton in New Orleans, including guest rooms, outdoor courtyard and pergola seating, and public spaces to brand standards.",
-    "quote": "Our business is making your business grow",
-    "overview": "Pinnacle South was engaged to manage FF&E for the Homewood Suites by Hilton in New Orleans, Louisiana. The scope included guest room furnishings, extended-stay amenities, and the signature outdoor courtyard area with pergola, seating, and side tables. Our team coordinated with ownership and the general contractor to source and deliver all items to Hilton brand specifications and support the property's opening schedule.",
-    "spotlight": "The outdoor courtyard and pergola seating required careful coordination of vendor lead times and installation sequencing. We delivered the wicker seating, cushions, and side tables on schedule so the amenity space was ready for opening. Quality checks and brand compliance review ensured the space met Homewood Suites standards and ownership expectations.",
-    "services": [
-      "Design Support",
-      "Procurement Management",
-      "Installation Support"
-    ],
-    "gallery": []
-  },
-  {
-    "id": "hampton-inn-suites-tampa",
-    "slug": "hampton-inn-suites-tampa",
-    "brand": "Hampton Inn & Suites",
-    "name": "Hampton Inn & Suites, Tampa",
-    "location": "Tampa, FL",
-    "folder": "Hampton-Inn-Tampa-FL",
-    "image": "/images/Hampton-Inn-Tampa-FL/hero.jpg",
-    "summary": "FF&E procurement and installation for a Hampton Inn in Tampa, Florida, delivering guest room furnishings, work desk and seating, and brand-aligned finishes to Hilton standards.",
-    "quote": "We do the little things that create big moments for your guests and for your revenue.",
-    "overview": "Pinnacle South managed the FF&E scope for the Hampton Inn in Tampa, Florida. The project included guest room case goods, bedding, the signature work desk and accent chair, floating nightstands, and coordinated wall and floor finishes. Our team worked with ownership and the design team to source and deliver all items to Hampton brand specifications and support the property's opening timeline.",
-    "spotlight": "Coordinating the Hampton-specific guest room package—including the distinctive headboard, desk chair, and carpet pattern—required close vendor alignment and installation sequencing. We ensured on-time delivery and installation so the Tampa property could open with fully furnished, brand-compliant rooms. Final walk-through and punch-list support ensured every detail met Hampton and ownership standards.",
-    "services": [
-      "Design Support",
-      "Procurement Management",
-      "Installation Support"
-    ],
-    "gallery": []
-  },
-  {
     "id": "celebration-hotel-fl",
     "slug": "celebration-hotel-fl",
     "brand": "Celebration Hotel",
@@ -116,6 +17,100 @@
       "Installation Support"
     ],
     "gallery": []
+  },
+  {
+    "id": "courtyard-marriott-cleveland-tn",
+    "slug": "courtyard-marriott-cleveland-tn",
+    "brand": "Courtyard by Marriott",
+    "name": "Courtyard by Marriott, Cleveland, TN",
+    "location": "Cleveland, TN",
+    "folder": "Courtyard-by-Marriott-Cleveland-TN",
+    "image": "/images/Courtyard-by-Marriott-Cleveland-TN/CY_CHACC_king standard_24.jpg",
+    "summary": "FF&E procurement and installation for the Courtyard by Marriott in Cleveland, Tennessee, delivering guest rooms, lobby, dining, and public spaces aligned with Marriott brand standards.",
+    "quote": "Great experience. It's what you work hard to create for your hotel guests. It's also what you get with Pinnacle South.",
+    "overview": "Pinnacle South supported FF&E for the Courtyard by Marriott in Cleveland, Tennessee. The scope included guest room case goods and soft goods, lobby and media pod areas, breakfast and dining venues, and coordinated finishes throughout the property. Our team worked with ownership and the project team to source and deliver selections to Courtyard brand specifications and the property schedule.",
+    "spotlight": "Coordinating multiple public areas—from the front desk and courtyard entry to breakfast and bar—required aligned vendor lead times and installation sequencing. We helped ensure furnishings and finishes arrived on schedule so the Cleveland property could present a cohesive, brand-compliant guest experience from day one.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "hampton-inn-suites-tampa-ybor-city-fl",
+    "slug": "hampton-inn-suites-tampa-ybor-city-fl",
+    "brand": "Hampton Inn & Suites",
+    "name": "Hampton Inn & Suites, Tampa Ybor City Downtown, FL",
+    "location": "Tampa, FL",
+    "folder": "Hampton-Inn-Ybor-City-FL",
+    "image": "/images/Hampton-Inn-Ybor-City-FL/20191107_TPAYBHX_Ybor-Front-Desk.jpg",
+    "summary": "FF&E procurement and installation for the Hampton Inn & Suites in Tampa's Ybor City downtown district, delivering guest-focused spaces and public areas to Hilton brand standards.",
+    "quote": "Distinctive design that's stylish. Smart buying that's relentless. Installation that's flawless. Personal service that's tireless. Managing process that's seamless.",
+    "overview": "Pinnacle South supported FF&E for the Hampton Inn & Suites in Tampa's historic Ybor City downtown area. The project encompassed guest room furnishings, the front desk and arrival experience, breakfast and dining zones, and coordinated finishes aligned with Hampton brand guidelines. Our team coordinated with ownership and the project team on specifications, lead times, and delivery to support the property timeline.",
+    "spotlight": "Delivering a cohesive Hampton experience in a vibrant downtown setting meant balancing brand standards with efficient space planning. We coordinated sourcing and installation so guest rooms and public areas were ready for opening with consistent quality, from the front desk through breakfast service.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "hampton-inn-chattanooga",
+    "slug": "hampton-inn-chattanooga",
+    "brand": "Hampton Inn",
+    "name": "Hampton Inn, Chattanooga",
+    "location": "Chattanooga, TN",
+    "folder": "Hampton-Inn-Chattanooga",
+    "image": "/images/Hampton-Inn-Chattanooga/12_Exec_King_1.jpg",
+    "summary": "FF&E procurement and installation for the Hampton Inn in Chattanooga, Tennessee, covering guest rooms, lobby, amenities, and public spaces to Hilton brand standards.",
+    "quote": "Make your guests really feel like guests, not just customers.",
+    "overview": "Pinnacle South supported FF&E for the Hampton Inn in Chattanooga, Tennessee. The scope included executive king and accessible guest room packages, standard bath configurations, the front desk and treat shop, pool and outdoor patio areas, and coordinated finishes throughout. Our team aligned selections with Hampton specifications and coordinated procurement and installation with the project schedule.",
+    "spotlight": "From the arrival experience through pool and patio amenities, we coordinated multiple FF&E packages so the Chattanooga property could open with consistent Hampton branding. Guest room case goods and soft goods were sequenced with public-area installations to minimize disruption and support quality at turnover.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "holiday-inn-express-nashville",
+    "slug": "holiday-inn-express-nashville",
+    "brand": "Holiday Inn Express",
+    "name": "Holiday Inn Express, Nashville",
+    "location": "Nashville, TN",
+    "folder": "Holiday-Inn-Express-Nashville",
+    "image": "/images/Holiday-Inn-Express-Nashville/Lobby-1.jpg",
+    "summary": "FF&E procurement and installation for the Holiday Inn Express in Nashville, Tennessee, covering guest rooms, breakfast and lounge areas, and public spaces to IHG brand standards.",
+    "quote": "Our business is making your business grow",
+    "overview": "Pinnacle South supported FF&E for the Holiday Inn Express in Nashville, Tennessee. The project included king and queen guest room packages, accessible king accommodations, king suite layouts, lobby and lounge seating, breakfast service areas, and coordinated finishes. Our team worked with ownership and the project team to align specifications with Holiday Inn Express brand requirements and coordinate delivery and installation.",
+    "spotlight": "Balancing efficient guest room packages with inviting lobby, lounge, and breakfast zones was key for this Nashville property. We coordinated vendor schedules and installation so each area met brand expectations and was ready for guests on schedule.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "homewood-suites-mcdonough-ga",
+    "slug": "homewood-suites-mcdonough-ga",
+    "brand": "Homewood Suites",
+    "name": "Homewood Suites, McDonough, GA",
+    "location": "McDonough, GA",
+    "folder": "Homewood-Suites-McDonough-GA",
+    "image": "/images/Homewood-Suites-McDonough-GA/1 King Accessible Studio - 1500371.jpg",
+    "summary": "FF&E procurement and installation for the Homewood Suites by Hilton in McDonough, Georgia, covering extended-stay studios, accessible layouts, lodge and meeting areas, and outdoor amenities to Hilton brand standards.",
+    "quote": "We do the little things that create big moments for your guests and for your revenue.",
+    "overview": "Pinnacle South supported FF&E for the Homewood Suites by Hilton in McDonough, Georgia. The scope included king accessible and two-queen hearing-accessible studio suites, accessible bath configurations, dual lodge gathering areas, a classroom-style meeting room, and an outdoor grill and patio. Our team coordinated specifications, procurement, and installation with Homewood Suites brand requirements and the property schedule.",
+    "spotlight": "Extended-stay properties demand durable, flexible FF&E across studios and shared spaces. We aligned guest suite packages with lodge, meeting, and patio programming so the McDonough property could welcome guests with a consistent Homewood experience from check-in through longer stays.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
   }
 ]
-

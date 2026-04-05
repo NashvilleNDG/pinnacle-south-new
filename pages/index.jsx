@@ -14,7 +14,7 @@ import projects from "@/data/projects.json";
 
 export async function getStaticProps() {
   return {
-    props: { projectTiles: projects.slice(0, 6) },
+    props: { projectTiles: projects },
   };
 }
 
