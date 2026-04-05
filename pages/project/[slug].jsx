@@ -9,7 +9,6 @@ import Layout from "@/components/Layout";
 import projects from "@/data/projects.json";
 
 const IMAGE_EXT = [".jpg", ".jpeg", ".png", ".webp", ".gif"];
-const HERO_NAMES = ["hero.jpg", "hero.jpeg", "hero.png", "hero.webp"];
 
 function getGalleryFromFolder(folderName) {
   const dir = path.join(process.cwd(), "public", "images", folderName);
@@ -18,10 +17,7 @@ function getGalleryFromFolder(folderName) {
   return files
     .filter((file) => {
       const ext = path.extname(file).toLowerCase();
-      const base = path.basename(file).toLowerCase();
-      if (!IMAGE_EXT.includes(ext)) return false;
-      if (HERO_NAMES.includes(base)) return false;
-      return true;
+      return IMAGE_EXT.includes(ext);
     })
     .sort()
     .map((file) => `/images/${folderName}/${file}`);
@@ -41,6 +37,9 @@ export async function getStaticProps({ params }) {
     if (folderGallery.length > 0) {
       project = { ...project, gallery: folderGallery };
     }
+  }
+  if (project?.image && Array.isArray(project.gallery) && !project.gallery.includes(project.image)) {
+    project = { ...project, gallery: [project.image, ...project.gallery] };
   }
   const relatedProjects = projects.filter((p) => p.slug !== params.slug).slice(0, 3);
   return {
