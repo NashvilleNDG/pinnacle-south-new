@@ -121,7 +121,7 @@ export default function HomePage({ projectTiles }) {
                 className="mt-8 lining-nums tabular-nums font-serif text-[34px] font-bold leading-[1.08] text-white sm:text-[44px] md:text-[52px] lg:text-[58px]"
               >
                 <span className="block">3 Essential FF&amp;E Services:</span>
-                <span className="mt-1 block bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
+                <span className="mt-1 block max-w-full overflow-visible text-balance tracking-tight leading-[1.12] sm:leading-[1.08] bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
                   Design, Purchasing, Installation
                 </span>
                 <span className="mt-4 block text-[26px] font-semibold italic text-white/95 sm:text-[32px] md:text-[36px]">
