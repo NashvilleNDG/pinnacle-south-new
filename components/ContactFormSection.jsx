@@ -189,12 +189,12 @@ export default function ContactFormSection({
                     <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
                       Call Us
                     </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
-                      <a className="text-white hover:underline" href="tel:+18007819010">
+                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
+                      <a className="text-[#AC7B4A] hover:underline" href="tel:+18007819010">
                         (800) 781-9010
                       </a>
                       <br />
-                      <a className="text-white hover:underline" href="tel:+16159059115">
+                      <a className="text-[#AC7B4A] hover:underline" href="tel:+16159059115">
                         (615) 905-9115
                       </a>
                     </div>
@@ -207,8 +207,8 @@ export default function ContactFormSection({
                     <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
                       Email Us
                     </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
-                      <a className="text-white hover:underline" href="mailto:info@pinnaclesouth.net">
+                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
+                      <a className="text-[#AC7B4A] hover:underline" href="mailto:info@pinnaclesouth.net">
                         info@pinnaclesouth.net
                       </a>
                     </div>
@@ -221,7 +221,7 @@ export default function ContactFormSection({
                     <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
                       Our Offices
                     </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
+                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
                       Griffin, Georgia
                       <br />
                       Franklin, Tennessee
@@ -235,7 +235,7 @@ export default function ContactFormSection({
                     <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
                       Business Hours
                     </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-white">
+                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
                       Mon – Fri: 8:00 AM – 5:00 PM EST
                     </div>
                   </div>
