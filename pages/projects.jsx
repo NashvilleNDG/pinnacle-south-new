@@ -49,7 +49,8 @@ export default function ProjectsPage({ projects: projectList }) {
   const featured = projectList[0];
   const secondary = projectList[1];
   const restFirst = projectList[2];
-  const restRemaining = projectList.slice(3);
+  const restSecond = projectList[3];
+  const restRemaining = projectList.slice(4);
 
   return (
     <Layout headerVariant="transparent">
@@ -118,7 +119,7 @@ export default function ProjectsPage({ projects: projectList }) {
               viewport={{ once: true }}
             >
               <div className="grid gap-2">
-                {/* Row 1: featured left; right column = secondary + restFirst stacked to fill gap */}
+                {/* Row 1: featured left; right column stacks up to 3 cards to fill vertical gap */}
                 <div className="grid gap-2 lg:grid-cols-[1.85fr_1fr] lg:items-stretch">
                   {featured ? (
                     <motion.article variants={cardItem} className="min-h-0 h-full">
@@ -203,6 +204,32 @@ export default function ProjectsPage({ projects: projectList }) {
                             </h2>
                             <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                               <MapPin className="h-[13px] w-[13px]" /> {restFirst.location}
+                            </div>
+                          </div>
+                        </Link>
+                      </motion.article>
+                    ) : null}
+                    {restSecond ? (
+                      <motion.article variants={cardItem}>
+                        <Link
+                          href={`/project/${restSecond.slug}`}
+                          className="group relative block overflow-hidden rounded-none cursor-pointer aspect-[4/3] bg-gray-200"
+                        >
+                          <img
+                            src={restSecond.image}
+                            alt={`${restSecond.name} hospitality FF&E project`}
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
+                          <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
+                            {restSecond.brand}
+                          </div>
+                          <div className="absolute inset-x-0 bottom-0 p-6">
+                            <h2 className="font-serif text-[18px] leading-[1.2] text-white">
+                              {restSecond.name}
+                            </h2>
+                            <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
+                              <MapPin className="h-[13px] w-[13px]" /> {restSecond.location}
                             </div>
                           </div>
                         </Link>

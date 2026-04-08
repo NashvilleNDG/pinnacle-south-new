@@ -1,5 +1,138 @@
 [
   {
+    "id": "the-grandy-member-louisville-ky",
+    "slug": "the-grandy-member-louisville-ky",
+    "brand": "The Grady, a Member Hotel",
+    "name": "The Grady, a Member Hotel, Louisville, KY",
+    "location": "Louisville, KY",
+    "folder": "The-Grandy-Member-Louisville-Ky",
+    "image": "/images/The-Grandy-Member-Louisville-Ky/44-The Grady - HGC - 20210609 -44.jpg",
+    "summary": "FF&E procurement and installation support for The Grady in Louisville, with guest room and public-area packages delivered to boutique hospitality standards.",
+    "quote": "Our focus is FF&E details so you can focus on your other responsibilities.",
+    "overview": "Pinnacle South supported FF&E coordination for The Grady, a Member Hotel, in Louisville, Kentucky. The project scope included curated guest room furnishings and public-space selections aligned with the property's boutique identity. Our team coordinated procurement timing and installation support to keep the project on schedule.",
+    "spotlight": "The Grady's character-driven design required careful alignment between finishes, furnishings, and schedule milestones. We managed FF&E sequencing to help deliver a cohesive guest experience across both private and shared spaces.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "aloft-santa-clara-ca",
+    "slug": "aloft-santa-clara-ca",
+    "brand": "Aloft Hotels",
+    "name": "Aloft Santa Clara, CA",
+    "location": "Santa Clara, CA",
+    "folder": "Aloft-Santa-Clara-CA",
+    "image": "/images/Aloft-Santa-Clara-CA/Lobby-Seating.jpg",
+    "summary": "FF&E procurement and installation support for Aloft Santa Clara, with guest room, lobby, and amenity-focused spaces delivered to brand standards.",
+    "quote": "Our focus is FF&E details so you can focus on your other responsibilities.",
+    "overview": "Pinnacle South supported FF&E coordination for Aloft Santa Clara in California. Scope included guest room furnishings, lobby seating, front desk and social spaces, and key amenity areas. We worked with the project team to align selections, scheduling, and installation with Aloft brand expectations.",
+    "spotlight": "The property combines energetic social zones with practical guest-room comfort. Our team coordinated procurement and installation sequencing to keep public areas and rooms moving in parallel and ready for turnover.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "courtyard-marriott-atlanta-downtown",
+    "slug": "courtyard-marriott-atlanta-downtown",
+    "brand": "Courtyard by Marriott",
+    "name": "Courtyard by Marriott, Atlanta Downtown, GA",
+    "location": "Atlanta, GA",
+    "folder": "Courtyard-by-Marriott-Atlanta-downtown",
+    "image": "/images/Courtyard-by-Marriott-Atlanta-downtown/Presidential_Suite_Living_Room.jpg",
+    "summary": "FF&E procurement and installation for Courtyard by Marriott Atlanta Downtown, including suite and guest room packages aligned with Marriott brand standards.",
+    "quote": "Great experience. It's what you work hard to create for your hotel guests. It's also what you get with Pinnacle South.",
+    "overview": "Pinnacle South supported FF&E for the Courtyard by Marriott in downtown Atlanta. The scope included king suites, premium suite living areas, and standard guest room packages. Our team coordinated sourcing, procurement, and installation to support ownership goals and brand compliance.",
+    "spotlight": "This downtown property required consistent guest room quality while maintaining polished suite-level finishes. We coordinated lead times and installation sequencing for timely, cohesive delivery.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "hampton-inn-kimball-south-pittsburgh-tn",
+    "slug": "hampton-inn-kimball-south-pittsburgh-tn",
+    "brand": "Hampton Inn",
+    "name": "Hampton Inn Kimball South Pittsburgh, TN",
+    "location": "Kimball, TN",
+    "folder": "Hampton-Inn-Kimball-South-Pittsburgh-TN",
+    "image": "/images/Hampton-Inn-Kimball-South-Pittsburgh-TN/CHAKM_Lobby_02.jpg",
+    "summary": "FF&E support for Hampton Inn Kimball South Pittsburgh, focused on efficient brand-aligned selections and project-ready installation coordination.",
+    "quote": "Make your guests really feel like guests, not just customers.",
+    "overview": "Pinnacle South provided FF&E coordination support for Hampton Inn Kimball South Pittsburgh in Tennessee. Our team aligned product selection and procurement planning with the property's schedule and Hampton brand expectations for guest comfort and consistency.",
+    "spotlight": "With schedule-sensitive delivery requirements, we focused on practical sourcing and installation readiness so property teams could move efficiently toward opening milestones.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "embassy-suites-atlanta-midtown-ga",
+    "slug": "embassy-suites-atlanta-midtown-ga",
+    "brand": "Embassy Suites",
+    "name": "Embassy Suites Atlanta Midtown, GA",
+    "location": "Atlanta, GA",
+    "folder": "Embassy-Suites-Atlanta-Midtown-Atlanta-GA",
+    "image": "/images/Embassy-Suites-Atlanta-Midtown-Atlanta-GA/Lobby - 1478464.jpg",
+    "summary": "FF&E procurement and installation support for Embassy Suites Atlanta Midtown, covering suites, dining venues, meeting spaces, and public areas.",
+    "quote": "Distinctive design that's stylish. Smart buying that's relentless. Installation that's flawless.",
+    "overview": "Pinnacle South supported FF&E for Embassy Suites Atlanta Midtown. The scope included suite configurations, lobby and front desk spaces, food and beverage venues, meeting areas, and amenity zones. We coordinated sourcing and delivery to keep project milestones aligned with brand and ownership expectations.",
+    "spotlight": "The project required consistency across diverse spaces, from guest suites to banquet and dining environments. Our team managed timing and installation priorities to deliver a cohesive finish across all areas.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "hampton-inn-tampa-fl",
+    "slug": "hampton-inn-tampa-fl",
+    "brand": "Hampton Inn",
+    "name": "Hampton Inn, Tampa, FL",
+    "location": "Tampa, FL",
+    "folder": "Hampton-Inn-Tampa-FL",
+    "image": "/images/Hampton-Inn-Tampa-FL/5. Queen Suite.jpg",
+    "summary": "FF&E support for Hampton Inn Tampa, with guest room and suite packages coordinated for brand consistency and efficient installation.",
+    "quote": "Our business is making your business grow.",
+    "overview": "Pinnacle South supported FF&E for Hampton Inn in Tampa, Florida. The project included ADA-compliant room types, standard king and queen configurations, and suite layouts with coordinated finishes. We worked with the project team on procurement timing and installation support.",
+    "spotlight": "Balancing ADA, standard, and suite room packages required careful coordination of deliveries and finishes. We helped keep the rollout consistent while supporting opening readiness.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
+    "id": "home2-suites-ft-walton-fl",
+    "slug": "home2-suites-ft-walton-fl",
+    "brand": "Home2 Suites by Hilton",
+    "name": "Home2 Suites Ft. Walton, FL",
+    "location": "Fort Walton Beach, FL",
+    "folder": "Home2-Suites-Ft-Walton-FL",
+    "image": "/images/Home2-Suites-Ft-Walton-FL/lobbymain.jpg",
+    "summary": "FF&E procurement and installation support for Home2 Suites Ft. Walton, covering guest suites, lobby, dining, and event-support spaces.",
+    "quote": "We do the little things that create big moments for your guests and for your revenue.",
+    "overview": "Pinnacle South supported FF&E for Home2 Suites in Fort Walton Beach, Florida. Scope included guest room packages, lobby and front desk zones, breakfast and gathering areas, and event-capable spaces. Our team coordinated vendor timelines, procurement, and installation sequencing for a smooth project delivery.",
+    "spotlight": "The property blends extended-stay function with social gathering spaces. We synchronized room and public-area packages so all key spaces were completed with consistent quality.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
     "id": "celebration-hotel-fl",
     "slug": "celebration-hotel-fl",
     "brand": "Celebration Hotel",
