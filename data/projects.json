@@ -1,5 +1,24 @@
 [
   {
+    "id": "crowne-plaza-ft-myers-fl",
+    "slug": "crowne-plaza-ft-myers-fl",
+    "brand": "Crowne Plaza",
+    "name": "Crowne Plaza Ft. Myers, FL",
+    "location": "Fort Myers, FL",
+    "folder": "Crowne-Plaza-Ft-Myers-Fl",
+    "image": "/images/Crowne-Plaza-Ft-Myers-Fl/Royal Palm social.jpg",
+    "summary": "FF&E procurement and installation support for Crowne Plaza Ft. Myers, with guest room, lobby, and meeting environments delivered to brand standards.",
+    "quote": "Our focus is FF&E details so you can focus on your other responsibilities.",
+    "overview": "Pinnacle South supported FF&E coordination for Crowne Plaza in Fort Myers, Florida. Scope included model guest room staging, lobby and social spaces, and meeting-ready environments such as boardroom areas. Our team coordinated product selection, procurement timing, and installation support to align with project milestones.",
+    "spotlight": "This property required balanced delivery across guest-facing social zones and business-focused spaces. We managed sequencing and quality control to help create a cohesive guest experience from arrival through meetings and in-room stays.",
+    "services": [
+      "Design Support",
+      "Procurement Management",
+      "Installation Support"
+    ],
+    "gallery": []
+  },
+  {
     "id": "the-grandy-member-louisville-ky",
     "slug": "the-grandy-member-louisville-ky",
     "brand": "The Grady, a Member Hotel",
