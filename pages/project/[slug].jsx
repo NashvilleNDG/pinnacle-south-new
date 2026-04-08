@@ -177,7 +177,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               {project.quote ? (
                 <blockquote className="border-l-4 border-copper pl-6 py-2">
                   <p className="font-serif text-[20px] italic leading-[1.6] text-textDark">
-                    “{project.quote}”
+                    {project.quote}
                   </p>
                 </blockquote>
               ) : null}

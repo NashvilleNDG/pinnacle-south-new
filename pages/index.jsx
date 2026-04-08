@@ -567,7 +567,7 @@ export default function HomePage({ projectTiles }) {
                 Employment Opportunities
               </span>
               <h2 className="mt-4 font-serif text-[30px] font-bold text-textDark sm:text-[36px]">
-                Build your career with Pinnacle South
+                Build Your Career with Pinnacle South
               </h2>
               <p className="mt-6 text-[16px] leading-[1.85] text-textMuted">
                 We offer great career opportunities for people with proven skills, high motivation, and a solid
@@ -632,7 +632,7 @@ export default function HomePage({ projectTiles }) {
                   Contact Us
                 </span>
                 <h2 className="mt-4 font-serif text-[30px] font-bold leading-[1.2] text-textDark sm:text-[38px]">
-                  Experience the FF&amp;E difference that is Pinnacle South
+                  Experience the FF&amp;E Difference That Is Pinnacle South
                 </h2>
               </motion.div>
             </div>
@@ -657,7 +657,7 @@ export default function HomePage({ projectTiles }) {
         >
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="font-serif text-[30px] font-bold text-white sm:text-[40px]">
-              Ready when you are
+              Ready When You Are
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-[16px] leading-7 text-white/75">
               Call us today or send a message — we respond within one business day.

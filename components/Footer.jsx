@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -13,8 +13,15 @@ export default function Footer() {
               className="h-[90px] w-auto brightness-0 invert"
             />
             <p className="mt-6 max-w-sm break-words text-center text-[16px] leading-8 text-white/90 md:max-w-md md:text-left">
-              Pinnacle South provides end-to-end FF&amp;E solutions for hospitality projects, covering design,
-              purchasing, and installation.
+              Pinnacle South provides
+              <br />
+              end-to-end FF&amp;E solutions
+              <br />
+              for hospitality projects,
+              <br />
+              covering design, purchasing,
+              <br />
+              and installation.
             </p>
           </section>
 
@@ -30,7 +37,7 @@ export default function Footer() {
                 { href: "/#our-company", label: "Company" },
                 { href: "/#our-services", label: "Services" },
                 { href: "/#our-projects", label: "Projects" },
-                { href: "/insights", label: "Insights" },
+                { href: "/#careers", label: "Careers" },
                 { href: "/#contact", label: "Contact" },
               ].map((l) => (
                 <li key={l.href}>
@@ -52,25 +59,25 @@ export default function Footer() {
             <div className="mt-6 space-y-4 text-[16px] leading-8 text-white/90">
               <div className="flex gap-3 justify-center md:justify-start">
                 <MapPin className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
-                <div>
-                  Griffin, Georgia<br />
-                  Franklin, Tennessee
-                </div>
-              </div>
-
-              <div className="flex gap-3 justify-center md:justify-start">
-                <Phone className="mt-[3px] h-4 w-4 shrink-0 text-[#AC7B4A]" aria-hidden="true" />
-                <div>
-                  <a className="hover:text-white transition-colors" href="tel:+18007819010">
-                    (800) 781-9010
-                  </a>
-                  <br />
+                <div className="flex flex-col gap-2 text-left">
+                  <div>
+                    <div>Griffin, Georgia</div>
                     <a
-                      className="hover:text-white transition-colors"
+                      className="block hover:text-white transition-colors"
+                      href="tel:+17702273476"
+                    >
+                      (770) 227-3476
+                    </a>
+                  </div>
+                  <div>
+                    <div>Franklin, Tennessee</div>
+                    <a
+                      className="block hover:text-white transition-colors"
                       href="tel:+16159059115"
                     >
                       (615) 905-9115
                     </a>
+                  </div>
                 </div>
               </div>
 

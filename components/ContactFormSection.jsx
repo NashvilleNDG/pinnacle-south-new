@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Clock, Mail, MapPin, Phone, Send, Shield } from "lucide-react";
+import { Clock, Mail, MapPin, Send, Shield } from "lucide-react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -184,19 +184,34 @@ export default function ContactFormSection({
 
               <div className="mt-6 space-y-6">
                 <div className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 shrink-0 text-white" strokeWidth={1.5} />
+                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-white" strokeWidth={1.5} />
                   <div>
                     <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
-                      Call Us
+                      Our Offices
                     </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
-                      <a className="text-[#AC7B4A] hover:underline" href="tel:+18007819010">
-                        (800) 781-9010
-                      </a>
-                      <br />
-                      <a className="text-[#AC7B4A] hover:underline" href="tel:+16159059115">
-                        (615) 905-9115
-                      </a>
+                    <div className="mt-1 flex flex-col gap-2">
+                      <div>
+                        <div className="text-[15px] font-semibold leading-snug text-[#AC7B4A]">
+                          Griffin, Georgia
+                        </div>
+                        <a
+                          className="block text-[15px] font-semibold leading-snug text-[#AC7B4A] hover:underline"
+                          href="tel:+17702273476"
+                        >
+                          (770) 227-3476
+                        </a>
+                      </div>
+                      <div>
+                        <div className="text-[15px] font-semibold leading-snug text-[#AC7B4A]">
+                          Franklin, Tennessee
+                        </div>
+                        <a
+                          className="block text-[15px] font-semibold leading-snug text-[#AC7B4A] hover:underline"
+                          href="tel:+16159059115"
+                        >
+                          (615) 905-9115
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -211,20 +226,6 @@ export default function ContactFormSection({
                       <a className="text-[#AC7B4A] hover:underline" href="mailto:info@pinnaclesouth.net">
                         info@pinnaclesouth.net
                       </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-white" strokeWidth={1.5} />
-                  <div>
-                    <div className="text-[11px] font-medium uppercase tracking-[0.15em] text-white">
-                      Our Offices
-                    </div>
-                    <div className="mt-1 text-[15px] font-semibold leading-snug text-[#AC7B4A]">
-                      Griffin, Georgia
-                      <br />
-                      Franklin, Tennessee
                     </div>
                   </div>
                 </div>
@@ -254,7 +255,7 @@ export default function ContactFormSection({
               <ul className="mx-auto mt-4 inline-block max-w-full list-disc space-y-2 pl-5 text-left text-[14px] leading-[1.7] text-[#777777] md:mx-0 md:block">
                 <li>Hospitality FF&amp;E expertise since 2003</li>
                 <li>Established relationships with top-tier manufacturers</li>
-                <li>Full-cycle support from specification through installation</li>
+                <li>Full-cycle support from design through installation</li>
                 <li>Transparent communication and budget management</li>
               </ul>
             </motion.section>
