@@ -281,8 +281,8 @@ export default function HomePage({ projectTiles }) {
                 >
                 <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:min-h-[280px]">
                   <img
-                    src="/images/about-hero.png"
-                    alt="Hotel design environment"
+                    src="/images/Crowne-Plaza-Ft-Myers-Fl/Boardroom.jpg"
+                    alt="Modern hospitality boardroom with conference table, executive seating, and natural light"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
@@ -442,8 +442,8 @@ export default function HomePage({ projectTiles }) {
 
                   <div className="mx-auto mt-12 max-w-5xl border-t border-white/10 pt-12">
                     <div className="grid gap-10 text-left md:grid-cols-2 md:gap-x-16 md:gap-y-6">
-                      <div className="space-y-5 text-[15px] leading-[1.85] text-white/82">
-                        <p className="text-[16px] font-medium leading-[1.75] text-white/95">
+                      <div className="space-y-5 text-[16px] font-medium leading-[1.75] text-white/95">
+                        <p>
                           Pinnacle South is not a &quot;big box&quot; FF&amp;E company. We&apos;re a boutique firm that&apos;s big on
                           personal service — and thinks outside the box.
                         </p>
@@ -461,7 +461,7 @@ export default function HomePage({ projectTiles }) {
                           that are reasonable, owner-friendly, and faster.
                         </p>
                       </div>
-                      <div className="space-y-5 text-[15px] leading-[1.85] text-white/82 md:border-l md:border-white/10 md:pl-16">
+                      <div className="space-y-5 text-[16px] font-medium leading-[1.75] text-white/95 md:border-l md:border-white/10 md:pl-16">
                         <p>
                           We are never satisfied until you are. And our responsibilities don&apos;t end when a project is
                           finished. We remain conveniently available so you remain satisfied.
@@ -470,7 +470,7 @@ export default function HomePage({ projectTiles }) {
                           Yes, we&apos;re good at what we do. As importantly, we are true to our word. A handshake still
                           means something to us.
                         </p>
-                        <p className="rounded-lg border border-[#AC7B4A]/25 bg-white/[0.04] px-5 py-4 text-[15px] leading-[1.75] text-white/90">
+                        <p>
                           Our business is about products and procedures, but it&apos;s also about people — about bonds
                           we form, friendships we develop, and values we share.
                         </p>
@@ -491,7 +491,7 @@ export default function HomePage({ projectTiles }) {
                 Our Projects
               </span>
               <h2 className="mt-4 font-serif text-[32px] font-bold text-white sm:text-[42px]">
-                A glimpse of our work
+                A Glimpse of Our Work
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-7 text-white/70">
                 Real properties, real timelines — FF&amp;E delivered with precision across the Southeast and
@@ -518,10 +518,18 @@ export default function HomePage({ projectTiles }) {
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D3A] via-[#0A1D3A]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
                         <div className="absolute inset-x-0 bottom-0 p-5">
-                          <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#AC7B4A]">
-                            {p.brand}
-                          </div>
-                          <div className="mt-1 font-serif text-[18px] font-semibold text-white">{p.name}</div>
+                          {p.cardTitle && p.cardSubtitle ? (
+                            <div>
+                              <div className="font-serif text-[18px] font-semibold text-white">
+                                {p.cardTitle}
+                              </div>
+                              <div className="mt-1 font-serif text-[18px] font-semibold leading-snug text-white">
+                                {p.cardSubtitle}
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="font-serif text-[18px] font-semibold text-white">{p.name}</div>
+                          )}
                           <div className="mt-2 inline-flex items-center gap-1 text-[13px] text-white/75">
                             <MapPin className="h-3.5 w-3.5" />
                             {p.location}

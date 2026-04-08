@@ -6,6 +6,18 @@ import Head from "next/head";
 import Layout from "@/components/Layout";
 import projects from "@/data/projects.json";
 
+function ProjectCardHeading({ project }) {
+  if (project.cardTitle && project.cardSubtitle) {
+    return (
+      <>
+        <span className="block">{project.cardTitle}</span>
+        <span className="mt-1 block leading-snug">{project.cardSubtitle}</span>
+      </>
+    );
+  }
+  return project.name;
+}
+
 export async function getStaticProps() {
   return {
     props: {
@@ -138,7 +150,7 @@ export default function ProjectsPage({ projects: projectList }) {
                         </div>
                         <div className="absolute inset-x-0 bottom-0 p-6">
                           <h2 className="font-serif text-[22px] leading-[1.2] text-white">
-                            {featured.name}
+                            <ProjectCardHeading project={featured} />
                           </h2>
                           <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                             <MapPin className="h-[13px] w-[13px]" /> {featured.location}
@@ -172,7 +184,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
-                              {secondary.name}
+                              <ProjectCardHeading project={secondary} />
                             </h2>
                             <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                               <MapPin className="h-[13px] w-[13px]" /> {secondary.location}
@@ -200,7 +212,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
-                              {restFirst.name}
+                              <ProjectCardHeading project={restFirst} />
                             </h2>
                             <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                               <MapPin className="h-[13px] w-[13px]" /> {restFirst.location}
@@ -226,7 +238,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
-                              {restSecond.name}
+                              <ProjectCardHeading project={restSecond} />
                             </h2>
                             <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                               <MapPin className="h-[13px] w-[13px]" /> {restSecond.location}
@@ -258,7 +270,7 @@ export default function ProjectsPage({ projects: projectList }) {
                             </div>
                             <div className="absolute inset-x-0 bottom-0 p-6">
                               <h2 className="font-serif text-[18px] leading-[1.2] text-white">
-                                {p.name}
+                                <ProjectCardHeading project={p} />
                               </h2>
                               <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                                 <MapPin className="h-[13px] w-[13px]" /> {p.location}
