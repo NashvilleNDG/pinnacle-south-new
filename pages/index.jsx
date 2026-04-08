@@ -122,7 +122,13 @@ export default function HomePage({ projectTiles }) {
               >
                 <span className="block">3 Essential FF&amp;E Services:</span>
                 <span className="mt-1 block max-w-full overflow-visible text-balance tracking-tight leading-[1.12] sm:leading-[1.08] bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
-                  Design, Purchasing, Installation
+                  Design
+                </span>
+                <span className="block max-w-full overflow-visible text-balance tracking-tight leading-[1.12] sm:leading-[1.08] bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
+                  Purchasing
+                </span>
+                <span className="block max-w-full overflow-visible text-balance tracking-tight leading-[1.12] sm:leading-[1.08] bg-gradient-to-r from-[#f0d4b8] via-white to-[#f0d4b8] bg-clip-text text-transparent">
+                  Installation
                 </span>
                 <span className="mt-4 block text-[26px] font-semibold italic text-white/95 sm:text-[32px] md:text-[36px]">
                   One Uncompromising Company
@@ -169,15 +175,15 @@ export default function HomePage({ projectTiles }) {
           <div className="relative border-t border-white/10 bg-[#0A1D3A]/95 backdrop-blur-md">
             <div className="mx-auto grid max-w-7xl grid-cols-3 gap-4 px-4 py-6 sm:gap-8 sm:px-6 lg:px-12">
               {[
-                { label: "Design", sub: "Concept to completion" },
-                { label: "Purchasing", sub: "Sourcing & value" },
-                { label: "Installation", sub: "Done right" },
+                { label: "Design", sub: "Concept To Completion" },
+                { label: "Purchasing", sub: "Sourcing & Value" },
+                { label: "Installation", sub: "Done Right" },
               ].map((item) => (
                 <div key={item.label} className="text-center">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#AC7B4A]">
+                  <div className="text-[13.75px] font-semibold uppercase tracking-[0.2em] text-[#AC7B4A]">
                     {item.label}
                   </div>
-                  <div className="mt-1 text-[13px] text-white/70">{item.sub}</div>
+                  <div className="mt-1 text-[16.25px] text-white/70">{item.sub}</div>
                 </div>
               ))}
             </div>
@@ -199,20 +205,20 @@ export default function HomePage({ projectTiles }) {
                 />
               </div>
               <div className="absolute -bottom-6 -right-4 max-w-[200px] rounded-2xl bg-[#0A1D3A] p-5 text-left text-white shadow-[0_12px_40px_rgba(10,29,58,0.4)] ring-1 ring-white/15 sm:-right-6 sm:p-6">
-                <div className="text-[22px] font-bold leading-tight sm:text-[26px]">Since 2003</div>
-                <div className="mt-2 text-[11px] font-medium uppercase tracking-[0.15em] text-white/90">
+                <div className="mb-2 text-[13px] font-medium uppercase tracking-[0.15em] text-white/90">
                   Serving hospitality
                 </div>
+                <div className="text-[22px] font-bold leading-tight sm:text-[26px]">Since 2003</div>
               </div>
             </motion.div>
 
             <motion.div {...fadeInUp} className="order-1 lg:order-2">
               <div className="text-center lg:text-left">
-                <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+                <span className="text-[15px] font-bold uppercase tracking-[0.22em] text-[#AC7B4A]">
                   Our Company
                 </span>
                 <h2 className="mt-4 font-serif text-[32px] font-bold leading-[1.15] text-textDark sm:text-[40px]">
-                  Hospitality&apos;s top talent, one accountable team
+                  Hospitality&apos;s Top Talent,<br />One Accountable Team
                 </h2>
               </div>
               <div className="mt-8 space-y-5 text-left text-[16px] leading-[1.85] text-textMuted">
@@ -240,7 +246,8 @@ export default function HomePage({ projectTiles }) {
                 </p>
                 <p>
                   FF&amp;E projects can be challenging, but we&apos;ve been making them a little easier since 2003. By
-                  pushing quality up, costs down, and ourselves to the limit.
+                  pushing quality up, costs down, and ourselves{" "}
+                  <span className="whitespace-nowrap">to the limit.</span>
                 </p>
               </div>
             </motion.div>
@@ -251,7 +258,7 @@ export default function HomePage({ projectTiles }) {
         <section id="our-services" className="scroll-mt-28 bg-white py-16 sm:py-24 md:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="mx-auto max-w-3xl text-center">
-              <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+              <span className="text-[15px] font-bold uppercase tracking-[0.22em] text-[#AC7B4A]">
                 What We Deliver
               </span>
               <p className="mt-4 text-[16px] leading-7 text-textMuted">
@@ -420,7 +427,7 @@ export default function HomePage({ projectTiles }) {
 
                 <div className="relative">
                   <header className="mx-auto flex max-w-2xl flex-col items-center text-center">
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#d4a574]">
+                    <span className="text-[14px] font-bold uppercase tracking-[0.28em] text-[#d4a574]">
                       How we partner
                     </span>
                     <div className="mt-5 flex flex-col items-center gap-5">
@@ -480,7 +487,7 @@ export default function HomePage({ projectTiles }) {
         <section id="our-projects" className="scroll-mt-28 bg-[#0A1D3A] py-16 sm:py-24 md:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <motion.div {...fadeInUp} className="text-center">
-              <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+              <span className="text-[15px] font-bold uppercase tracking-[0.22em] text-[#AC7B4A]">
                 Our Projects
               </span>
               <h2 className="mt-4 font-serif text-[32px] font-bold text-white sm:text-[42px]">
@@ -548,7 +555,7 @@ export default function HomePage({ projectTiles }) {
         <section id="careers" className="scroll-mt-28 border-t border-border bg-white py-16 sm:py-20">
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <motion.div {...fadeInUp}>
-              <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+              <span className="text-[15px] font-bold uppercase tracking-[0.22em] text-[#AC7B4A]">
                 Employment Opportunities
               </span>
               <h2 className="mt-4 font-serif text-[30px] font-bold text-textDark sm:text-[36px]">
@@ -613,7 +620,7 @@ export default function HomePage({ projectTiles }) {
           <div className="bg-gradient-to-b from-white to-cream pt-10 pb-5 sm:pt-12 sm:pb-6 md:pt-14 md:pb-7">
             <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
               <motion.div {...fadeInUp}>
-                <span className="text-[12px] font-semibold uppercase tracking-[0.22em] text-[#AC7B4A]">
+                <span className="text-[15px] font-bold uppercase tracking-[0.22em] text-[#AC7B4A]">
                   Contact Us
                 </span>
                 <h2 className="mt-4 font-serif text-[30px] font-bold leading-[1.2] text-textDark sm:text-[38px]">

@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
       <nav
-        className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-7 lg:justify-between lg:py-5 ${borderClass}`}
+        className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-4 lg:justify-between lg:py-3 ${borderClass}`}
       >
         <Link
           href="/#top"
@@ -47,7 +47,7 @@ export default function Header() {
           <img
             src="/images/logo-transparent.png"
             alt="Pinnacle South logo"
-            className="h-20 w-auto object-contain lg:h-16"
+            className="h-[7.5rem] w-auto object-contain lg:h-[6.25rem]"
           />
         </Link>
 
@@ -55,7 +55,7 @@ export default function Header() {
           {NAV_LINKS.map((item) => (
             <Link
               key={item.href}
-              className={`text-[13px] font-medium xl:text-[14px] ${textClass} hover:text-copper transition-colors`}
+              className={`text-[16.9px] font-medium xl:text-[18.2px] ${textClass} hover:text-copper transition-colors`}
               href={item.href}
             >
               {item.label}
@@ -63,7 +63,7 @@ export default function Header() {
           ))}
           <Link
             href="/#contact"
-            className="inline-flex shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[13px] font-semibold text-white transition-colors hover:bg-[#1a3a5c] xl:text-[14px]"
+            className="inline-flex shrink-0 rounded-sm bg-[#0f2744] px-5 py-2.5 text-[16.9px] font-semibold text-white transition-colors hover:bg-[#1a3a5c] xl:text-[18.2px]"
           >
             Get in Touch
           </Link>
@@ -116,7 +116,7 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMobileOpen(false)}
-                    className="w-full rounded-xl px-5 py-4 text-[16px] font-medium text-black transition-colors hover:bg-gray-50"
+                    className="w-full rounded-xl px-5 py-4 text-[20.8px] font-medium text-black transition-colors hover:bg-gray-50"
                   >
                     {item.label}
                   </Link>
@@ -124,7 +124,7 @@ export default function Header() {
                 <Link
                   href="/#contact"
                   onClick={() => setIsMobileOpen(false)}
-                  className="mt-2 w-full rounded-xl bg-[#0A1D3A] px-6 py-3.5 text-center text-[14px] font-semibold text-white hover:bg-[#0f2744] transition-colors"
+                  className="mt-2 w-full rounded-xl bg-[#0A1D3A] px-6 py-3.5 text-center text-[18.2px] font-semibold text-white hover:bg-[#0f2744] transition-colors"
                 >
                   Get in Touch
                 </Link>
