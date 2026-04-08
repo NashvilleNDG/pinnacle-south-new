@@ -92,7 +92,7 @@ export default function HomePage({ projectTiles }) {
 
       <main className="bg-cream">
         {/* HERO */}
-        <section id="top" className="relative min-h-screen scroll-mt-28">
+        <section id="top" className="relative min-h-screen scroll-mt-20">
           <div className="absolute inset-0">
             <img
               src="/images/home-hero.png"

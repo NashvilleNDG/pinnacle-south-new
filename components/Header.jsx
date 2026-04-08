@@ -37,7 +37,7 @@ export default function Header() {
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
       <nav
-        className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-4 lg:justify-between lg:py-3 ${borderClass}`}
+        className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-5 lg:justify-between lg:py-3 ${borderClass}`}
       >
         <Link
           href="/#top"
@@ -47,7 +47,7 @@ export default function Header() {
           <img
             src="/images/logo-transparent.png"
             alt="Pinnacle South logo"
-            className="h-[7.5rem] w-auto object-contain lg:h-[6.25rem]"
+            className="h-[72.8px] w-auto object-contain lg:h-20"
           />
         </Link>
 
