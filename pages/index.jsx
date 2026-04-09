@@ -200,7 +200,7 @@ export default function HomePage({ projectTiles }) {
                 />
               </div>
               <div className="absolute -bottom-6 -right-4 max-w-[200px] rounded-2xl bg-[#0A1D3A] p-5 text-left text-white shadow-[0_12px_40px_rgba(10,29,58,0.4)] ring-1 ring-white/15 sm:-right-6 sm:p-6">
-                <div className="mb-2 text-[13px] font-medium uppercase tracking-[0.15em] text-white/90">
+                <div className="mb-2 text-[16px] font-bold uppercase tracking-[0.15em] text-white/90">
                   Serving hospitality
                 </div>
                 <div className="text-[22px] font-bold leading-tight sm:text-[26px]">Since 2003</div>
