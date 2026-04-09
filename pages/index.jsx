@@ -194,7 +194,7 @@ export default function HomePage({ projectTiles }) {
             >
               <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-gray-200 shadow-[0_24px_60px_rgba(15,39,68,0.18)] ring-1 ring-black/5">
                 <img
-                  src="/images/home-page2.png"
+                  src="/images/our-company.png"
                   alt="Pinnacle South team collaboration"
                   className="h-full w-full object-cover"
                 />
@@ -375,8 +375,8 @@ export default function HomePage({ projectTiles }) {
                 >
                 <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:min-h-[280px]">
                   <img
-                    src="/images/industry-trends-blog.png"
-                    alt="Modern hotel lobby with living wall, reception, and integrated architectural finishes"
+                    src="/images/installation.png"
+                    alt="Hotel installation crew measuring and installing guest room furnishings"
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
