@@ -97,7 +97,7 @@ export default function HomePage({ projectTiles }) {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A1D3A]/92 via-[#0f2744]/75 to-[#1a3a5c]/55" />
           </div>
 
-          <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pt-[80px] pb-28 sm:px-6 sm:pt-[90px] sm:pb-32 lg:px-12 lg:pt-32 lg:pb-32">
+          <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col max-lg:justify-start lg:justify-center px-4 pt-[144px] pb-28 sm:px-6 sm:pt-[170px] sm:pb-32 lg:px-12 lg:pt-32 lg:pb-32">
             <motion.div
               variants={containerStagger}
               initial="hidden"
