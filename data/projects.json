@@ -21,8 +21,8 @@
   {
     "id": "the-grandy-member-louisville-ky",
     "slug": "the-grandy-member-louisville-ky",
-    "brand": "The Grady, a Member Hotel",
-    "name": "A Grady Member Hotel Louisville",
+    "brand": "The Grady",
+    "name": "A Grady Small Luxury Hotels of the World",
     "cardTitle": "The Grady",
     "cardSubtitle": "Small Luxury Hotels of the World",
     "location": "Louisville, KY",
@@ -37,7 +37,15 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryLast": [
+      "/images/The-Grandy-Member-Louisville-Ky/12-The Grady - HGC - 20210609 -12.jpg",
+      "/images/The-Grandy-Member-Louisville-Ky/11-The Grady - HGC - 20210609 -11.jpg",
+      "/images/The-Grandy-Member-Louisville-Ky/38-The Grady - HGC - 20210609 -38.jpg",
+      "/images/The-Grandy-Member-Louisville-Ky/14-The Grady - HGC - 20210609 -14.jpg",
+      "/images/The-Grandy-Member-Louisville-Ky/16-The Grady - HGC - 20210609 -16.jpg",
+      "/images/The-Grady-Member-Louisville-Ky/35-The Grady - HGC - 20210609 -35.jpg"
+    ]
   },
   {
     "id": "aloft-santa-clara-ca",
@@ -62,7 +70,7 @@
     "id": "courtyard-marriott-atlanta-downtown",
     "slug": "courtyard-marriott-atlanta-downtown",
     "brand": "Courtyard by Marriott",
-    "name": "Courtyard by Marriott Atlanta Downtown",
+    "name": "Courtyard By Marriott Atlanta Downtown",
     "cardTitle": "Courtyard By Marriott",
     "cardSubtitle": "Atlanta Downtown",
     "location": "Atlanta, GA",
@@ -77,7 +85,10 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryLast": [
+      "/images/Courtyard-by-Marriott-Atlanta-downtown/King_Suite_Wet_Bar.jpg"
+    ]
   },
   {
     "id": "hampton-inn-kimball-south-pittsburgh-tn",
@@ -86,7 +97,7 @@
     "name": "Hampton Inn Kimball",
     "location": "South Pittsburgh, TN",
     "folder": "Hampton-Inn-Kimball-South-Pittsburgh-TN",
-    "image": "/images/Hampton-Inn-Kimball-South-Pittsburgh-TN/CHAKM_Lobby_02.jpg",
+    "image": "/images/Hampton-Inn-Kimball-South-Pittsburgh-TN/CHAKM_Dining_01.jpg",
     "summary": "FF&E support for Hampton Inn Kimball South Pittsburgh, focused on efficient brand-aligned selections and project-ready installation coordination.",
     "quote": "Make your guests really feel like guests, not just customers.",
     "overview": "Pinnacle South provided FF&E coordination support for Hampton Inn Kimball South Pittsburgh in Tennessee. Our team aligned product selection and procurement planning with the property's schedule and Hampton brand expectations for guest comfort and consistency.",
@@ -134,13 +145,16 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryLast": [
+      "/images/Hampton-Inn-Tampa-FL/6. Suite Entryway.jpg"
+    ]
   },
   {
     "id": "home2-suites-ft-walton-fl",
     "slug": "home2-suites-ft-walton-fl",
     "brand": "Home2 Suites by Hilton",
-    "name": "Home2 Suites Eglin Air Force Base",
+    "name": "Home2 Suites - Eglin Air Force Base",
     "location": "Fort Walton, FL",
     "cardTitle": "Home2 Suites",
     "cardSubtitle": "Eglin Air Force Base",
@@ -174,7 +188,12 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryLast": [
+      "/images/Celebration-Hotel-FL/AK_MCOCB_FitnessCenter.jpg",
+      "/images/Celebration-Hotel-FL/AK_MCOCB_FitnessCenter2.jpg",
+      "/images/Celebration-Hotel-FL/AK_MCOCB_Bathroom_shower.jpg"
+    ]
   },
   {
     "id": "courtyard-marriott-cleveland-tn",
@@ -199,7 +218,7 @@
     "id": "hampton-inn-suites-tampa-ybor-city-fl",
     "slug": "hampton-inn-suites-tampa-ybor-city-fl",
     "brand": "Hampton Inn & Suites",
-    "name": "Hampton Inn & Suites Tampa Ybor City Downtown",
+    "name": "Hampton Inn & Suites Ybor City Downtown",
     "location": "Tampa, FL",
     "cardTitle": "Hampton Inn & Suites",
     "cardSubtitle": "Ybor City Downtown",
@@ -233,7 +252,12 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryLast": [
+      "/images/Hampton-Inn-Chattanooga/06_Pool_1.jpg",
+      "/images/Hampton-Inn-Chattanooga/06_Pool_2.jpg",
+      "/images/Hampton-Inn-Chattanooga/15_Standard_Tub_3.jpg"
+    ]
   },
   {
     "id": "holiday-inn-express-nashville",
@@ -277,7 +301,7 @@
     "id": "staybridge-suites-denver-cherry-creek",
     "slug": "staybridge-suites-denver-cherry-creek",
     "brand": "Staybridge Suites",
-    "name": "Staybridge Suites Denver \u2013 Cherry Creek",
+    "name": "Staybridge Suites Denver-Cherry Creek",
     "location": "Glendale, CO",
     "cardTitle": "Staybridge Suites",
     "cardSubtitle": "Denver-Cherry Creek",
@@ -292,6 +316,13 @@
       "Procurement Management",
       "Installation Support"
     ],
-    "gallery": []
+    "gallery": [],
+    "galleryFirst": [
+      "/images/Staybridge-Suites-Denver\u2013Cherry-Creek/9b6c29ec-9311-4aad-b403-7bd5da4dc0bc.jpg",
+      "/images/Staybridge-Suites-Denver\u2013Cherry-Creek/92a51a2b-386d-434b-9b62-49318b792cb6.jpg",
+      "/images/Staybridge-Suites-Denver\u2013Cherry-Creek/366547ac-eb91-46be-aef5-a20bb5856cad.jpg",
+      "/images/Staybridge-Suites-Denver\u2013Cherry-Creek/c231cd6d-d52f-44d2-919d-d015d85b0b5c.jpg",
+      "/images/Staybridge-Suites-Denver\u2013Cherry-Creek/d539710d-68bc-47d9-9afd-d2ad3b8112e6.jpg"
+    ]
   }
 ]

@@ -23,6 +23,172 @@ function getGalleryFromFolder(folderName) {
     .map((file) => `/images/${folderName}/${file}`);
 }
 
+/** Filename without extension, lowercased, for heuristics */
+function galleryFileStem(publicPath) {
+  let name = publicPath.split("/").pop() || "";
+  try {
+    name = decodeURIComponent(name);
+  } catch {
+    /* ignore */
+  }
+  return name
+    .replace(/\.[a-z0-9]+$/i, "")
+    .toLowerCase()
+    .replace(/[_-]+/g, " ");
+}
+
+/** Guest-facing washroom / bath shots — sorted to the end of the gallery */
+function isLikelyBathroomImage(publicPath) {
+  const f = ` ${galleryFileStem(publicPath)} `;
+  if (
+    /\b(bathroom|washroom|restroom|shower|toilet|vanity|bathtub|powder\s+room)\b/.test(f)
+  ) {
+    return true;
+  }
+  if (/\b(roll\s*in\s*shower|accessible\s+bathroom|guest\s+bathroom)\b/.test(f)) {
+    return true;
+  }
+  if (/\bbath\b/.test(f)) {
+    return true;
+  }
+  if (f.includes("standard tub")) {
+    return true;
+  }
+  return false;
+}
+
+/** Higher score = show earlier (after hero) — lobbies, suites, F&B, etc. */
+function showcaseAppealScore(publicPath) {
+  const f = galleryFileStem(publicPath);
+  let s = 0;
+  if (/\b(lobby|ballroom|pool|courtyard|atrium|lounge|oasis|plaza|royal|social)\b/.test(f)) {
+    s += 92;
+  }
+  if (/\b(presidential|wedding|reception|facade|exterior|entrance|night|signage)\b/.test(f)) {
+    s += 86;
+  }
+  if (
+    /(front desk|breakfast|restaurant|\bbar\b|dining|kitchen|grill|bistro|coffee|evening|bkfast)/.test(
+      f
+    )
+  ) {
+    s += 78;
+  }
+  if (/(boardroom|meeting|conference|freedom hall|riseanddine|wxyz|model room|sharing|caption|dive)/.test(
+    f
+  )) {
+    s += 72;
+  }
+  if (/\b(suite|living|penthouse|balcony|wet bar)\b/.test(f)) {
+    s += 58;
+  }
+  if (/\b(king|queen|guest|bedroom|exec|studio|accessible studio)\b/.test(f)) {
+    s += 44;
+  }
+  if (/\b(desk|seating|porch|patio|treat shop|outdoor)\b/.test(f)) {
+    s += 32;
+  }
+  if (/(fitness|gym|business center|classroom|game|pet|lodge|meeting room|grill and patio)/i.test(f)) {
+    s += 20;
+  }
+  return s;
+}
+
+/**
+ * Hero first (if present), then stronger showcase images, then remaining rooms,
+ * then bathroom / washroom shots last. Stable within ties.
+ */
+function orderGalleryByShowcase(paths, heroPath) {
+  if (!Array.isArray(paths) || paths.length <= 1) {
+    return paths;
+  }
+  const seen = new Set();
+  const deduped = [];
+  for (const p of paths) {
+    if (seen.has(p)) {
+      continue;
+    }
+    seen.add(p);
+    deduped.push(p);
+  }
+  const heroFirst =
+    heroPath && deduped.includes(heroPath) ? [heroPath] : [];
+  const rest = deduped.filter((p) => !heroFirst.includes(p));
+  const withOrder = rest.map((path, order) => ({ path, order }));
+  const nonBath = [];
+  const bath = [];
+  for (const e of withOrder) {
+    if (isLikelyBathroomImage(e.path)) {
+      bath.push(e);
+    } else {
+      nonBath.push(e);
+    }
+  }
+  nonBath.sort((a, b) => {
+    const diff = showcaseAppealScore(b.path) - showcaseAppealScore(a.path);
+    if (diff !== 0) {
+      return diff;
+    }
+    return a.order - b.order;
+  });
+  bath.sort((a, b) => a.order - b.order);
+  return [...heroFirst, ...nonBath.map((e) => e.path), ...bath.map((e) => e.path)];
+}
+
+/** Full `/images/...` path or filename relative to the project folder */
+function resolveGalleryEntry(entry, folderName) {
+  if (typeof entry !== "string") {
+    return null;
+  }
+  const t = entry.trim();
+  if (!t) {
+    return null;
+  }
+  if (t.startsWith("/images/")) {
+    return t;
+  }
+  return `/images/${folderName}/${t}`;
+}
+
+/**
+ * Move specific paths to the end of the gallery (in list order). Entries may be
+ * full `/images/...` paths or filenames relative to the project image folder.
+ */
+function applyGalleryPinnedLast(orderedPaths, folderName, lastEntries) {
+  if (!Array.isArray(orderedPaths) || !lastEntries?.length || !folderName) {
+    return orderedPaths;
+  }
+  const tailWanted = lastEntries.map((e) => resolveGalleryEntry(e, folderName)).filter(Boolean);
+  const tailSet = new Set(tailWanted);
+  const tailOrdered = [];
+  for (const p of tailWanted) {
+    if (orderedPaths.includes(p)) {
+      tailOrdered.push(p);
+    }
+  }
+  const head = orderedPaths.filter((p) => !tailSet.has(p));
+  return [...head, ...tailOrdered];
+}
+
+/**
+ * Pin images to the start of the gallery (in list order), before all other paths.
+ */
+function applyGalleryPinnedFirst(orderedPaths, folderName, firstEntries) {
+  if (!Array.isArray(orderedPaths) || !firstEntries?.length || !folderName) {
+    return orderedPaths;
+  }
+  const headWanted = firstEntries.map((e) => resolveGalleryEntry(e, folderName)).filter(Boolean);
+  const headSet = new Set(headWanted);
+  const headOrdered = [];
+  for (const p of headWanted) {
+    if (orderedPaths.includes(p)) {
+      headOrdered.push(p);
+    }
+  }
+  const rest = orderedPaths.filter((p) => !headSet.has(p));
+  return [...headOrdered, ...rest];
+}
+
 export async function getStaticPaths() {
   return {
     paths: projects.map((p) => ({ params: { slug: p.slug } })),
@@ -40,6 +206,16 @@ export async function getStaticProps({ params }) {
   }
   if (project?.image && Array.isArray(project.gallery) && !project.gallery.includes(project.image)) {
     project = { ...project, gallery: [project.image, ...project.gallery] };
+  }
+  if (project && Array.isArray(project.gallery) && project.gallery.length > 1) {
+    let gallery = orderGalleryByShowcase(project.gallery, project.image || null);
+    if (Array.isArray(project.galleryLast) && project.galleryLast.length > 0 && project.folder) {
+      gallery = applyGalleryPinnedLast(gallery, project.folder, project.galleryLast);
+    }
+    if (Array.isArray(project.galleryFirst) && project.galleryFirst.length > 0 && project.folder) {
+      gallery = applyGalleryPinnedFirst(gallery, project.folder, project.galleryFirst);
+    }
+    project = { ...project, gallery };
   }
   const relatedProjects = projects.filter((p) => p.slug !== params.slug).slice(0, 3);
   return {
@@ -88,7 +264,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
     description,
     image: heroImage ? `https://www.pinnaclesouth.net${heroImage}` : undefined,
     url: `https://www.pinnaclesouth.net/project/${project.slug}/`,
-    about: project.brand,
+    about: project.name,
     locationCreated: project.location,
     provider: {
       "@type": "Organization",
@@ -151,9 +327,6 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
               </motion.div>
 
               <motion.div variants={itemFade} className="mt-4 flex flex-wrap items-center justify-center gap-3">
-                <span className="rounded-sm bg-white/20 px-4 py-1.5 text-[13px] font-semibold text-white backdrop-blur-sm">
-                  {project.brand}
-                </span>
                 <span className="inline-flex items-center gap-1 text-[14px] text-white/70">
                   <MapPin className="h-[14px] w-[14px]" />
                   {project.location}
@@ -283,7 +456,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   <div className="space-y-4">
                     <div>
                       <div className="text-[11px] uppercase tracking-eyebrow text-processMuted">BRAND</div>
-                      <div className="mt-1 text-[15px] font-semibold text-textDark">{project.brand}</div>
+                      <div className="mt-1 text-[15px] font-semibold text-textDark">{project.name}</div>
                     </div>
                     <div>
                       <div className="text-[11px] uppercase tracking-eyebrow text-processMuted">LOCATION</div>
@@ -344,7 +517,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)]" />
                     <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                      {p.brand}
+                      {p.cardTitle || p.brand}
                     </div>
                     <div className="absolute inset-x-0 bottom-0 p-6">
                       <div className="font-serif text-[18px] leading-[1.2] text-white">{p.name}</div>

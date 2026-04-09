@@ -37,11 +37,6 @@ const itemFade = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const HOME_SIGNATURE_QUOTES = [
-  "We’re great problem solvers, but we’re also problem avoiders.",
-  "Great hotels start with great rooms. And great rooms start here.",
-];
-
 const HOME_PROJECTS_PREVIEW_COUNT = 6;
 
 export default function HomePage({ projectTiles }) {
@@ -583,43 +578,6 @@ export default function HomePage({ projectTiles }) {
                 <ArrowRight className="h-4 w-4" />
               </a>
             </motion.div>
-          </div>
-        </section>
-
-        {/* Signature quotes — above contact */}
-        <section
-          aria-label="Words we live by"
-          className="relative border-t border-border bg-[#0A1D3A] py-16 sm:py-20 md:py-24"
-        >
-          <div className="mx-auto max-w-6xl px-6 lg:px-12">
-            <motion.div {...fadeInUp} className="mx-auto max-w-2xl text-center">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#AC7B4A]">
-                Words we live by
-              </span>
-            </motion.div>
-
-            <div className="mx-auto mt-10 grid max-w-5xl gap-12 md:mt-12 md:grid-cols-2 md:gap-14 lg:gap-16">
-              {HOME_SIGNATURE_QUOTES.map((text, i) => (
-                <motion.figure
-                  key={text}
-                  initial={{ opacity: 0, y: 22 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="relative rounded-sm border border-white/[0.08] bg-white/[0.04] p-8 text-center shadow-[0_20px_50px_rgba(0,0,0,0.2)] ring-1 ring-inset ring-white/[0.04] sm:p-10 md:text-left"
-                >
-                  <div
-                    className="absolute left-1/2 top-0 h-1 w-12 -translate-x-1/2 -translate-y-px bg-[#AC7B4A] md:left-8 md:translate-x-0 lg:left-10"
-                    aria-hidden
-                  />
-                  <blockquote className="pt-2">
-                    <p className="font-serif text-[20px] font-medium italic leading-[1.55] text-white sm:text-[22px]">
-                      {text}
-                    </p>
-                  </blockquote>
-                </motion.figure>
-              ))}
-            </div>
           </div>
         </section>
 

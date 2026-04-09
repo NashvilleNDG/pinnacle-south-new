@@ -146,7 +146,7 @@ export default function ProjectsPage({ projects: projectList }) {
                         />
                         <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
                         <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                          {featured.brand}
+                          {featured.cardTitle || featured.brand}
                         </div>
                         <div className="absolute inset-x-0 bottom-0 p-6">
                           <h2 className="font-serif text-[22px] leading-[1.2] text-white">
@@ -180,7 +180,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           />
                           <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
                           <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                            {secondary.brand}
+                            {secondary.cardTitle || secondary.brand}
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
@@ -208,7 +208,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           />
                           <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
                           <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                            {restFirst.brand}
+                            {restFirst.cardTitle || restFirst.brand}
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
@@ -234,7 +234,7 @@ export default function ProjectsPage({ projects: projectList }) {
                           />
                           <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
                           <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                            {restSecond.brand}
+                            {restSecond.cardTitle || restSecond.brand}
                           </div>
                           <div className="absolute inset-x-0 bottom-0 p-6">
                             <h2 className="font-serif text-[18px] leading-[1.2] text-white">
@@ -266,7 +266,7 @@ export default function ProjectsPage({ projects: projectList }) {
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />
                             <div className="absolute left-4 top-4 rounded-full bg-white/15 px-3 py-1 text-[12px] font-medium text-white backdrop-blur-sm">
-                              {p.brand}
+                              {p.cardTitle || p.brand}
                             </div>
                             <div className="absolute inset-x-0 bottom-0 p-6">
                               <h2 className="font-serif text-[18px] leading-[1.2] text-white">
