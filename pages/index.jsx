@@ -62,7 +62,7 @@ export default function HomePage({ projectTiles }) {
   };
 
   return (
-    <Layout headerVariant="transparent">
+    <Layout fullBleedHero headerVariant="transparent">
       <Head>
         <title>Pinnacle South | Design, Purchasing &amp; Installation for Hospitality FF&amp;E</title>
         <meta
@@ -85,9 +85,9 @@ export default function HomePage({ projectTiles }) {
         />
       </Head>
 
-      <main className="bg-cream">
-        {/* HERO */}
-        <section id="top" className="relative min-h-screen scroll-mt-20">
+      <div className="bg-cream">
+        {/* HERO: full-bleed under fixed header below lg; inner padding clears navbar for copy */}
+        <section id="top" className="relative min-h-screen scroll-mt-0 lg:scroll-mt-28">
           <div className="absolute inset-0">
             <img
               src="/images/home-hero.png"
@@ -97,7 +97,7 @@ export default function HomePage({ projectTiles }) {
             <div className="absolute inset-0 bg-gradient-to-br from-[#0A1D3A]/92 via-[#0f2744]/75 to-[#1a3a5c]/55" />
           </div>
 
-          <div className="relative mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 py-28 sm:px-6 sm:py-32 lg:px-12">
+          <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 pt-[80px] pb-28 sm:px-6 sm:pt-[90px] sm:pb-32 lg:px-12 lg:pt-32 lg:pb-32">
             <motion.div
               variants={containerStagger}
               initial="hidden"
@@ -637,7 +637,7 @@ export default function HomePage({ projectTiles }) {
           </div>
         </motion.section>
 
-      </main>
+      </div>
     </Layout>
   );
 }
