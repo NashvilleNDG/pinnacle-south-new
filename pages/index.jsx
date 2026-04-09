@@ -77,7 +77,7 @@ export default function HomePage({ projectTiles }) {
           property="og:description"
           content="One uncompromising team for hospitality FF&E: design, procurement, and installation."
         />
-        <meta property="og:image" content="/images/home-hero.png" />
+        <meta property="og:image" content="/images/home-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"
@@ -90,7 +90,7 @@ export default function HomePage({ projectTiles }) {
         <section id="top" className="relative min-h-screen scroll-mt-0 lg:scroll-mt-28">
           <div className="absolute inset-0">
             <img
-              src="/images/home-hero.png"
+              src="/images/home-hero.webp"
               alt="Pinnacle South hospitality FF&E"
               className="h-full w-full object-cover"
             />
@@ -194,7 +194,7 @@ export default function HomePage({ projectTiles }) {
             >
               <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-gray-200 shadow-[0_24px_60px_rgba(15,39,68,0.18)] ring-1 ring-black/5">
                 <img
-                  src="/images/our-company.png"
+                  src="/images/our-company.webp"
                   alt="Pinnacle South team collaboration"
                   className="h-full w-full object-cover"
                 />
@@ -276,7 +276,7 @@ export default function HomePage({ projectTiles }) {
                 >
                 <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:min-h-[280px]">
                   <img
-                    src="/images/Crowne-Plaza-Ft-Myers-Fl/Boardroom.jpg"
+                    src="/images/Crowne-Plaza-Ft-Myers-Fl/Boardroom.webp"
                     alt="Modern hospitality boardroom with conference table, executive seating, and natural light"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
@@ -353,7 +353,7 @@ export default function HomePage({ projectTiles }) {
                 </div>
                 <div className="relative mt-8 min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:mt-0 md:min-h-[280px]">
                   <img
-                    src="/images/service-precisius-blog.png"
+                    src="/images/service-precisius-blog.webp"
                     alt="Business partners shaking hands after a successful procurement meeting"
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
@@ -375,7 +375,7 @@ export default function HomePage({ projectTiles }) {
                 >
                 <div className="relative min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:min-h-[280px]">
                   <img
-                    src="/images/installation.png"
+                    src="/images/installation.webp"
                     alt="Hotel installation crew measuring and installing guest room furnishings"
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />

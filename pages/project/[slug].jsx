@@ -14,13 +14,13 @@ function getGalleryFromFolder(folderName) {
   const dir = path.join(process.cwd(), "public", "images", folderName);
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir);
-  return files
-    .filter((file) => {
-      const ext = path.extname(file).toLowerCase();
-      return IMAGE_EXT.includes(ext);
-    })
-    .sort()
-    .map((file) => `/images/${folderName}/${file}`);
+  const imageFiles = files.filter((file) => {
+    const ext = path.extname(file).toLowerCase();
+    return IMAGE_EXT.includes(ext);
+  });
+  const webpFiles = imageFiles.filter((file) => path.extname(file).toLowerCase() === ".webp");
+  const picked = webpFiles.length > 0 ? webpFiles : imageFiles;
+  return picked.sort().map((file) => `/images/${folderName}/${file}`);
 }
 
 /** Filename without extension, lowercased, for heuristics */
@@ -252,7 +252,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
 
   const heroImage =
     project.image ||
-    (project.folder ? `/images/${project.folder}/hero.jpg` : null);
+    (project.folder ? `/images/${project.folder}/hero.webp` : null);
 
   const description =
     project.summary || "FF&E project by Pinnacle South";
@@ -295,7 +295,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
         <meta name="description" content={description} />
         <meta property="og:title" content={`${project.name} | Pinnacle South`} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={heroImage || "/images/hero/projects-hero.jpg"} />
+        <meta property="og:image" content={heroImage || "/images/project-hero.webp"} />
         <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"

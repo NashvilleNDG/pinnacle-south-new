@@ -46,7 +46,7 @@ export default function HotelBrandsPage() {
           property="og:description"
           content="Pinnacle South serves respected hospitality brands across the United States, delivering FF&E solutions built to each brand's exact standards."
         />
-        <meta property="og:image" content="/images/hotel-brands-hero.png" />
+        <meta property="og:image" content="/images/hotel-brands-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -59,7 +59,7 @@ export default function HotelBrandsPage() {
         >
           <div className="absolute inset-0">
             <img
-              src="/images/hotel-brands-hero.png"
+              src="/images/hotel-brands-hero.webp"
               alt="Hotel brands hero background"
               className="h-full w-full object-cover"
             />

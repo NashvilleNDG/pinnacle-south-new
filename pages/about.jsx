@@ -43,7 +43,7 @@ export default function AboutPage() {
           property="og:description"
           content="A trusted partner in hospitality FF&E, delivering premium solutions through experience, precision, and commitment to every project."
         />
-        <meta property="og:image" content="/images/about-hero.png" />
+        <meta property="og:image" content="/images/about-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
         <section aria-label="About hero" className="relative min-h-[60vh]">
           <div className="absolute inset-0">
             <img
-              src="/images/about-hero.png"
+              src="/images/about-hero.webp"
               alt="About Pinnacle South hero background"
               className="h-full w-full object-cover"
             />
@@ -114,7 +114,7 @@ export default function AboutPage() {
               <div className="relative w-full max-w-[560px]">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-md bg-white shadow-soft">
                   <img
-                    src="/images/home-page2.png"
+                    src="/images/home-page2.webp"
                     alt="Pinnacle South team meeting"
                     className="h-full w-full object-cover"
                   />

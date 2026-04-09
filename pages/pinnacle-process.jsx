@@ -132,7 +132,7 @@ export default function PinnacleProcessPage() {
           property="og:description"
           content="A structured, proven approach that reduces risk, improves alignment, and supports efficient hospitality project execution."
         />
-        <meta property="og:image" content="/images/process-hero.png" />
+        <meta property="og:image" content="/images/process-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -141,7 +141,7 @@ export default function PinnacleProcessPage() {
         <section id="hero" aria-label="Process hero" className="relative min-h-[60vh]">
           <div className="absolute inset-0">
             <img
-              src="/images/process-hero.png"
+              src="/images/process-hero.webp"
               alt="The Pinnacle Process hero background"
               className="h-full w-full object-cover"
             />

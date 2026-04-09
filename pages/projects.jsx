@@ -77,7 +77,7 @@ export default function ProjectsPage({ projects: projectList }) {
           property="og:description"
           content="A portfolio of hospitality FF&E projects that reflect our commitment to quality, precision, and enduring client partnerships."
         />
-        <meta property="og:image" content="/images/project-hero.png" />
+        <meta property="og:image" content="/images/project-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <script
           type="application/ld+json"
@@ -90,7 +90,7 @@ export default function ProjectsPage({ projects: projectList }) {
         <section id="hero" aria-label="Projects hero" className="relative min-h-[60vh]">
           <div className="absolute inset-0">
             <img
-              src="/images/project-hero.png"
+              src="/images/project-hero.webp"
               alt="Hospitality FF&E projects hero background"
               className="h-full w-full object-cover"
             />

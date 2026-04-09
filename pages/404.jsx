@@ -15,7 +15,7 @@ export default function Custom404() {
           property="og:description"
           content="The page you’re looking for doesn’t exist. Return home or explore projects and insights."
         />
-        <meta property="og:image" content="/images/og/404.jpg" />
+        <meta property="og:image" content="/images/hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 

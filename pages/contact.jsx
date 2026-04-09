@@ -34,7 +34,7 @@ export default function ContactPage() {
           property="og:description"
           content="Get in touch with Pinnacle South to discuss hospitality FF&E procurement, sourcing, and project coordination."
         />
-        <meta property="og:image" content="/images/contact-hero.jpg" />
+        <meta property="og:image" content="/images/contact-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -46,7 +46,7 @@ export default function ContactPage() {
         >
           <div className="absolute inset-0">
             <img
-              src="/images/contact-hero.jpg"
+              src="/images/contact-hero.webp"
               alt="Hospitality project corridor with meeting rooms"
               className="h-full w-full object-cover"
             />

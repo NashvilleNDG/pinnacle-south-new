@@ -46,7 +46,7 @@ export default function VendorPartnersPage() {
           property="og:description"
           content="Our curated network of manufacturers and suppliers ensures quality, value, and reliability across every hospitality FF&E project."
         />
-        <meta property="og:image" content="/images/vendor-hero.png" />
+        <meta property="og:image" content="/images/vendor-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -59,7 +59,7 @@ export default function VendorPartnersPage() {
         >
           <div className="absolute inset-0">
             <img
-              src="/images/vendor-hero.png"
+              src="/images/vendor-hero.webp"
               alt="Vendor partners hero background"
               className="h-full w-full object-cover"
             />

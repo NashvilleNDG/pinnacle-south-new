@@ -60,7 +60,7 @@ export default function InsightsPage({ posts }) {
           property="og:description"
           content="Industry perspectives, FF&E expertise, and thought leadership from the Pinnacle South team."
         />
-        <meta property="og:image" content="/images/about-hero.png" />
+        <meta property="og:image" content="/images/about-hero.webp" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -73,7 +73,7 @@ export default function InsightsPage({ posts }) {
         >
           <div className="absolute inset-0">
             <img
-              src="/images/about-hero.png"
+              src="/images/about-hero.webp"
               alt="Insights hero background"
               className="h-full w-full object-cover"
             />
