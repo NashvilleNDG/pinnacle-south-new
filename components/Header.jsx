@@ -35,9 +35,11 @@ export default function Header() {
   const bgClass = `bg-white ${isScrolled ? "shadow-soft" : ""}`;
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${bgClass}`}>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 overflow-visible transition-colors duration-200 ${bgClass}`}
+    >
       <nav
-        className={`relative mx-auto flex max-w-7xl items-center justify-end border-b px-6 py-5 lg:justify-between lg:py-3 ${borderClass}`}
+        className={`relative mx-auto flex max-w-7xl items-center justify-end overflow-visible border-b px-6 py-3 max-lg:min-h-[calc(0.75rem+87.36px+0.75rem+1px)] lg:min-h-0 lg:justify-between lg:overflow-visible ${borderClass}`}
       >
         <Link
           href="/#top"
@@ -47,7 +49,7 @@ export default function Header() {
           <img
             src="/images/logo-transparent.png"
             alt="Pinnacle South logo"
-            className="h-[72.8px] w-auto object-contain lg:h-20"
+            className="h-[87.36px] w-auto object-contain lg:h-24"
           />
         </Link>
 
@@ -96,7 +98,7 @@ export default function Header() {
                 <img
                   src="/images/logo-transparent.png"
                   alt="Pinnacle South logo"
-                  className="my-[20px] h-20 w-auto object-contain brightness-0 invert"
+                  className="my-[20px] h-24 w-auto object-contain brightness-0 invert"
                 />
               </Link>
               <button
