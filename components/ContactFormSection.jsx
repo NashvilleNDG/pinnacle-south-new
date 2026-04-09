@@ -44,7 +44,12 @@ export default function ContactFormSection({
               {description}
             </p>
 
-            <form className="mt-8 space-y-6" aria-label="Contact form">
+            <form
+              className="mt-8 space-y-6"
+              aria-label="Contact form"
+              action="https://formspree.io/f/xqegopva"
+              method="POST"
+            >
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label
