@@ -353,8 +353,8 @@ export default function HomePage({ projectTiles }) {
                 </div>
                 <div className="relative mt-8 min-h-[220px] overflow-hidden rounded-xl bg-gray-200 md:mt-0 md:min-h-[280px]">
                   <img
-                    src="/images/service-precisius-blog.webp"
-                    alt="Business partners shaking hands after a successful procurement meeting"
+                    src="/images/Procurement.webp"
+                    alt="Hospitality FF&E procurement and vendor partnership"
                     className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                 </div>
