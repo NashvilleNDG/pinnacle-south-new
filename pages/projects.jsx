@@ -313,7 +313,7 @@ export default function ProjectsPage({ projects: projectList }) {
         >
           <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
             <h2 className="font-serif text-[48px] font-bold leading-[1.1] text-white">
-              Have a Project in Mind?
+              Have A Project In Mind?
             </h2>
             <p className="mx-auto mt-5 max-w-[520px] text-[18px] leading-7 text-white/70">
               Let us know about your upcoming hospitality project. We&apos;d love to explore how Pinnacle South
@@ -324,7 +324,7 @@ export default function ProjectsPage({ projects: projectList }) {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
-                Discuss a Project <ArrowRight className="h-4 w-4" />
+                Discuss A Project <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="#portfolio"

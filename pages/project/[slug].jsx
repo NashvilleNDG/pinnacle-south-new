@@ -606,7 +606,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                 </div>
 
                 <div className="bg-[#0A1D3A] p-6 text-center md:text-left">
-                  <h3 className="text-[18px] font-semibold text-white">Start a Similar Project</h3>
+                  <h3 className="text-[18px] font-semibold text-white">Start A Similar Project</h3>
                   <p className="mt-2 text-[14px] leading-6 text-white/70">
                     Let&apos;s discuss how Pinnacle South can deliver for your next hospitality development.
                   </p>
@@ -615,7 +615,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                       href="/contact"
                       className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-6 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
                     >
-                      Get in Touch <ArrowRight className="h-4 w-4" />
+                      Get In Touch <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>

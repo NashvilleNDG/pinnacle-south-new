@@ -307,7 +307,7 @@ export default function PinnacleProcessPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
-                Discuss a Project <ArrowRight className="h-4 w-4" />
+                Discuss A Project <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/projects"
