@@ -34,7 +34,10 @@ export default function ProjectsPage({ projects: projectList }) {
       itemListElement: projectList.map((p, idx) => ({
         "@type": "ListItem",
         position: idx + 1,
-        name: p.name,
+        name:
+          p.cardTitle && p.cardSubtitle
+            ? `${p.cardTitle} ${p.cardSubtitle}`
+            : p.name,
         url: `https://www.pinnaclesouth.net/project/${p.slug}/`,
       })),
     }),
@@ -261,7 +264,11 @@ export default function ProjectsPage({ projects: projectList }) {
                           >
                             <img
                               src={p.image}
-                              alt={`${p.name} hospitality FF&E project`}
+                              alt={
+                                p.cardTitle && p.cardSubtitle
+                                  ? `${p.cardTitle} ${p.cardSubtitle} hospitality FF&E project`
+                                  : `${p.name} hospitality FF&E project`
+                              }
                               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)] group-hover:opacity-95 transition-opacity" />

@@ -5,7 +5,7 @@ export default function CTASection({
   label = "START A PROJECT",
   title = "Ready to plan your next hospitality FF&E scope?",
   description = "Request a consultation to discuss timelines, sourcing, procurement, and execution support.",
-  primaryCtaLabel = "Request a Consultation",
+  primaryCtaLabel = "Request A Consultation",
   primaryCtaHref = "/contact",
 }) {
   return (

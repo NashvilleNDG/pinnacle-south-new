@@ -154,7 +154,7 @@ export default function HomePage({ projectTiles }) {
                   href="/#contact"
                   className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3.5 text-[14px] font-semibold text-white shadow-lg shadow-black/20 transition-colors hover:bg-[#8f6438]"
                 >
-                  Request a No-Obligation Bid
+                  Request A No-Obligation Bid
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
@@ -486,7 +486,7 @@ export default function HomePage({ projectTiles }) {
                 Our Projects
               </span>
               <h2 className="mt-4 font-serif text-[32px] font-bold text-white sm:text-[42px]">
-                A Glimpse of Our Work
+                A Glimpse Of Our Work
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-[16px] leading-7 text-white/70">
                 Real properties, real timelines — FF&amp;E delivered with precision across the Southeast and
@@ -508,7 +508,11 @@ export default function HomePage({ projectTiles }) {
                       >
                         <img
                           src={p.image}
-                          alt={p.name}
+                          alt={
+                            p.cardTitle && p.cardSubtitle
+                              ? `${p.cardTitle} ${p.cardSubtitle}`
+                              : p.name
+                          }
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1D3A] via-[#0A1D3A]/40 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
@@ -562,7 +566,7 @@ export default function HomePage({ projectTiles }) {
                 Employment Opportunities
               </span>
               <h2 className="mt-4 font-serif text-[30px] font-bold text-textDark sm:text-[36px]">
-                Build Your Career with Pinnacle South
+                Build Your Career With Pinnacle South
               </h2>
               <p className="mt-6 text-[16px] leading-[1.85] text-textMuted">
                 We offer great career opportunities for people with proven skills, high motivation, and a solid
@@ -590,7 +594,7 @@ export default function HomePage({ projectTiles }) {
                   Contact Us
                 </span>
                 <h2 className="mt-4 font-serif text-[30px] font-bold leading-[1.2] text-textDark sm:text-[38px]">
-                  Experience the FF&amp;E Difference That Is Pinnacle South
+                  Experience The FF&amp;E Difference That Is Pinnacle South
                 </h2>
               </motion.div>
             </div>
@@ -599,7 +603,7 @@ export default function HomePage({ projectTiles }) {
           <ContactFormSection
             idPrefix="home"
             sectionId="contact-form"
-            title="Start the Conversation"
+            title="Start The Conversation"
             sectionClassName="bg-cream pt-2 pb-12 sm:pt-3 sm:pb-16 md:pb-20"
             showMap={false}
           />
@@ -631,7 +635,7 @@ export default function HomePage({ projectTiles }) {
                 href="/#contact"
                 className="inline-flex w-full items-center justify-center rounded-sm border border-white/40 px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
               >
-                Send a message
+                Send A Message
               </Link>
             </div>
           </div>

@@ -107,7 +107,7 @@ export default function Footer() {
               href="/#contact"
               className="mt-6 inline-flex rounded-sm bg-[#AC7B4A] px-6 py-3 text-[16px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
             >
-              Request a Consultation
+              Request A Consultation
             </Link>
           </section>
         </div>

@@ -57,6 +57,66 @@ function isLikelyBathroomImage(publicPath) {
   return false;
 }
 
+/** Guest sleeping rooms (king/queen/suite) — used to avoid clustering similar shots. */
+function isLikelyGuestRoomGalleryShot(publicPath) {
+  if (isLikelyBathroomImage(publicPath)) {
+    return false;
+  }
+  const f = galleryFileStem(publicPath);
+  if (/\b(suite|king|queen)\b/.test(f)) {
+    return true;
+  }
+  if (/\bada\b/.test(f) && /\bking\b/.test(f)) {
+    return true;
+  }
+  return false;
+}
+
+/**
+ * Evenly interleave guest-room images with other gallery shots so bedrooms
+ * are not all adjacent (hero path stays first).
+ */
+function spreadGuestRoomShots(orderedPaths) {
+  if (!Array.isArray(orderedPaths) || orderedPaths.length <= 2) {
+    return orderedPaths;
+  }
+  const hero = orderedPaths[0];
+  const tail = orderedPaths.slice(1);
+  const rooms = [];
+  const rest = [];
+  for (const p of tail) {
+    if (isLikelyGuestRoomGalleryShot(p)) {
+      rooms.push(p);
+    } else {
+      rest.push(p);
+    }
+  }
+  if (rooms.length <= 1 || rest.length === 0) {
+    return orderedPaths;
+  }
+  const n = rooms.length;
+  const m = rest.length;
+  const slotCount = n + 1;
+  const base = Math.floor(m / slotCount);
+  let rem = m % slotCount;
+  const segments = [];
+  let idx = 0;
+  for (let s = 0; s < slotCount; s++) {
+    const size = base + (rem > 0 ? 1 : 0);
+    if (rem > 0) {
+      rem -= 1;
+    }
+    segments.push(rest.slice(idx, idx + size));
+    idx += size;
+  }
+  const merged = [];
+  for (let i = 0; i < n; i++) {
+    merged.push(...segments[i], rooms[i]);
+  }
+  merged.push(...segments[n]);
+  return [hero, ...merged];
+}
+
 /** Higher score = show earlier (after hero) — lobbies, suites, F&B, etc. */
 function showcaseAppealScore(publicPath) {
   const f = galleryFileStem(publicPath);
@@ -189,6 +249,28 @@ function applyGalleryPinnedFirst(orderedPaths, folderName, firstEntries) {
   return [...headOrdered, ...rest];
 }
 
+/**
+ * Place specific images immediately after the hero (grid slots 1…N in a 2-column layout).
+ * Entries may be full `/images/...` paths or filenames relative to the project folder.
+ */
+function pinImmediatelyAfterHero(gallery, heroPath, pinEntries, folderName) {
+  if (!Array.isArray(gallery) || !pinEntries?.length || !folderName) {
+    return gallery;
+  }
+  const pins = pinEntries
+    .map((e) => resolveGalleryEntry(e, folderName))
+    .filter(Boolean)
+    .filter((p) => gallery.includes(p));
+  if (!pins.length) {
+    return gallery;
+  }
+  const rest = gallery.filter((p) => p !== heroPath && !pins.includes(p));
+  if (heroPath && gallery.includes(heroPath)) {
+    return [heroPath, ...pins, ...rest];
+  }
+  return [...pins, ...rest];
+}
+
 export async function getStaticPaths() {
   return {
     paths: projects.map((p) => ({ params: { slug: p.slug } })),
@@ -214,6 +296,21 @@ export async function getStaticProps({ params }) {
     }
     if (Array.isArray(project.galleryFirst) && project.galleryFirst.length > 0 && project.folder) {
       gallery = applyGalleryPinnedFirst(gallery, project.folder, project.galleryFirst);
+    }
+    if (project.gallerySpreadGuestRooms) {
+      gallery = spreadGuestRoomShots(gallery);
+    }
+    if (
+      Array.isArray(project.galleryPinAfterHero) &&
+      project.galleryPinAfterHero.length > 0 &&
+      project.folder
+    ) {
+      gallery = pinImmediatelyAfterHero(
+        gallery,
+        project.image || null,
+        project.galleryPinAfterHero,
+        project.folder
+      );
     }
     project = { ...project, gallery };
   }
@@ -247,6 +344,19 @@ const itemFade = {
   show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
+/** When set, hero and details match project card (cardTitle + cardSubtitle). */
+function projectCardHeading(project) {
+  if (project.cardTitle && project.cardSubtitle) {
+    return { title: project.cardTitle, subtitle: project.cardSubtitle };
+  }
+  return null;
+}
+
+function projectPlainDisplayName(project) {
+  const h = projectCardHeading(project);
+  return h ? `${h.title} ${h.subtitle}` : project.name;
+}
+
 export default function ProjectDetailPage({ project, relatedProjects }) {
   if (!project) return null;
 
@@ -257,14 +367,17 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
   const description =
     project.summary || "FF&E project by Pinnacle South";
 
+  const cardHeading = projectCardHeading(project);
+  const displayName = projectPlainDisplayName(project);
+
   const creativeWorkJsonLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    name: project.name,
+    name: displayName,
     description,
     image: heroImage ? `https://www.pinnaclesouth.net${heroImage}` : undefined,
     url: `https://www.pinnaclesouth.net/project/${project.slug}/`,
-    about: project.name,
+    about: displayName,
     locationCreated: project.location,
     provider: {
       "@type": "Organization",
@@ -291,9 +404,9 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
   return (
     <Layout headerVariant="transparent">
       <Head>
-        <title>{project.name} | Pinnacle South</title>
+        <title>{displayName} | Pinnacle South</title>
         <meta name="description" content={description} />
-        <meta property="og:title" content={`${project.name} | Pinnacle South`} />
+        <meta property="og:title" content={`${displayName} | Pinnacle South`} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={heroImage || "/images/project-hero.webp"} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -309,14 +422,19 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
           <div className="absolute inset-0">
             <img
               src={heroImage}
-              alt={`${project.name} project hero image`}
+              alt={`${displayName} project hero image`}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-[#0A1D3A]/70" />
           </div>
 
           <div className="absolute inset-x-0 bottom-0 flex flex-col items-center px-5 pb-10 pt-8 text-center sm:p-12">
-            <motion.div variants={containerStagger} initial="hidden" animate="show" className="max-w-3xl">
+            <motion.div
+              variants={containerStagger}
+              initial="hidden"
+              animate="show"
+              className="w-full max-w-5xl overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
               <motion.div variants={itemFade}>
                 <Link
                   href="/projects"
@@ -335,9 +453,22 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
 
               <motion.h1
                 variants={itemFade}
-                className="mt-3 font-serif text-[24px] font-bold leading-[1.12] tracking-tight text-white sm:text-[34px] sm:leading-[1.1] md:text-[42px] lg:text-[52px]"
+                className="mt-3 font-serif font-bold tracking-tight text-white"
               >
-                {project.name}
+                {cardHeading ? (
+                  <>
+                    <span className="block text-[24px] leading-[1.12] sm:text-[34px] sm:leading-[1.1] md:text-[42px] lg:text-[52px]">
+                      {cardHeading.title}
+                    </span>
+                    <span className="mt-1.5 block max-w-full whitespace-nowrap text-[24px] leading-[1.12] sm:mt-2 sm:text-[34px] sm:leading-[1.1] md:text-[42px] lg:text-[52px]">
+                      {cardHeading.subtitle}
+                    </span>
+                  </>
+                ) : (
+                  <span className="text-[24px] leading-[1.12] sm:text-[34px] sm:leading-[1.1] md:text-[42px] lg:text-[52px]">
+                    {project.name}
+                  </span>
+                )}
               </motion.h1>
             </motion.div>
           </div>
@@ -371,7 +502,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                       >
                         <img
                           src={src}
-                          alt={`${project.name} gallery image ${idx + 1}`}
+                          alt={`${displayName} gallery image ${idx + 1}`}
                           className="h-full w-full object-cover"
                         />
                       </button>
@@ -419,7 +550,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   <div className="relative z-10 mx-16 max-h-[90vh] max-w-[90vw]">
                     <img
                       src={gallery[lightboxIndex]}
-                      alt={`${project.name} gallery image ${lightboxIndex + 1} of ${gallery.length}`}
+                      alt={`${displayName} gallery image ${lightboxIndex + 1} of ${gallery.length}`}
                       className="max-h-[90vh] max-w-full object-contain"
                       onClick={(e) => e.stopPropagation()}
                     />
@@ -456,7 +587,16 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   <div className="space-y-4">
                     <div>
                       <div className="text-[11px] uppercase tracking-eyebrow text-processMuted">BRAND</div>
-                      <div className="mt-1 text-[15px] font-semibold text-textDark">{project.name}</div>
+                      <div className="mt-1 text-[15px] font-semibold text-textDark">
+                        {cardHeading ? (
+                          <>
+                            <span className="block">{cardHeading.title}</span>
+                            <span className="mt-0.5 block leading-snug">{cardHeading.subtitle}</span>
+                          </>
+                        ) : (
+                          project.name
+                        )}
+                      </div>
                     </div>
                     <div>
                       <div className="text-[11px] uppercase tracking-eyebrow text-processMuted">LOCATION</div>
@@ -512,7 +652,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                   >
                     <img
                       src={p.image}
-                      alt={`${p.name} hospitality FF&E project`}
+                      alt={`${projectPlainDisplayName(p)} hospitality FF&E project`}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(15,39,68,0.90)_0%,rgba(15,39,68,0.3)_50%,rgba(0,0,0,0)_100%)]" />
@@ -520,7 +660,14 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                       {p.cardTitle || p.brand}
                     </div>
                     <div className="absolute inset-x-0 bottom-0 p-6">
-                      <div className="font-serif text-[18px] leading-[1.2] text-white">{p.name}</div>
+                      {projectCardHeading(p) ? (
+                        <div className="font-serif text-[18px] font-semibold leading-[1.2] text-white">
+                          <span className="block">{p.cardTitle}</span>
+                          <span className="mt-0.5 block leading-snug">{p.cardSubtitle}</span>
+                        </div>
+                      ) : (
+                        <div className="font-serif text-[18px] leading-[1.2] text-white">{p.name}</div>
+                      )}
                       <div className="mt-1 inline-flex items-center gap-1 text-[13px] text-white/70">
                         <MapPin className="h-[13px] w-[13px]" /> {p.location}
                       </div>
@@ -555,7 +702,7 @@ export default function ProjectDetailPage({ project, relatedProjects }) {
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-sm bg-[#AC7B4A] px-8 py-3 text-[14px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
-                Request a Consultation
+                Request A Consultation
               </Link>
               <Link
                 href="/projects"

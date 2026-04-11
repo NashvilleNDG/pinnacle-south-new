@@ -340,7 +340,7 @@ export default function AboutPage() {
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 rounded-sm bg-[#AC7B4A] px-8 py-3 text-[13px] font-semibold text-white transition-colors hover:bg-[#8f6438]"
               >
-                Request a Consultation <ArrowRight className="h-4 w-4" />
+                Request A Consultation <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 href="/projects"
